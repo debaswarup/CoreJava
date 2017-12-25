@@ -1,0 +1,874 @@
+Puzzles
+
+http://ww2.codechef.com/problems/H1
+
+http://timesofindia.indiatimes.com/life-style/health-fitness/diet/Why-men-are-balding-in-their-20s/articleshow/18269473.cms
+
+palas beej
+bidankshow
+
+
+krim gutar ras - dabur
+
+
+1. Already established impression(past 6 mnth)
+2. If wud hav been in TCS
+3. will get review for next 1/2 yr...increment will b less..which in current wud hav bn full
+4. work location...may b client side...no onsite
+5. trnsfr
+6. developmnt prjct
+7. coming to service based company
+02240629629
+
+
+Account No. 06831610093702
+Bank Name HDFC BANK  
+City TRIVANDRUM  
+Branch Location KAZHAKKOOTA - TRIVANDRUM IFSC-HDFC0000683  
+
+ashutosh.kverma@tcs.com
+vipin.murdiya@axiomcapital.co.in
+
+
+http://www.codekeep.net/browse.aspx
+
+
+-------------------------------------
+
+EO535191202IN
+http://www.indiapost.gov.in/tracking.aspx
+---------------------------------------------
+
+https://incometaxindiaefiling.gov.in/e-Filing/MyAccount/UploadReturnsHome.html?ID=341336006
+
+TAXSMILE
+
+http://www.youtube.com/watch?v=r27decDIckw
+http://www.youtube.com/playlist?list=PL52CFDE9DACB21419
+
+
+5100374
+
+
+http://www.gutenberg.org/files/20583/20583-h/20583-h.htm#d0e5988
+
+
+lauki
+tulsi
+pudina
+no iodine salt
+
+ipsa aparajita
+
+shalini pujary
+
+ TSKYS1ppl0i 
+ 
+ 
+ siddharth shankar
+ 
+ 
+ -----------------------------------------------------------
+ 
+ 
+ 
+ 
+ sanchaiti hospital
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 24-3-64
+ 
+ 300713700554 
+ 
+ 
+ policy no
+ is 9202732312006067
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ x,y,N/E/S/W
+                                                                      
+                                                                     
+                                                                     
+                                             
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars.
+This plateau, which is curiously rectangular, must be navigated by the
+rovers so that their on-board cameras can get a complete view of the
+surrounding terrain to send back to Earth.
+A rover's position and location is represented by a combination of x and y
+co-ordinates and a letter representing one of the four cardinal compass
+points. The plateau is divided up into a grid to simplify navigation. An
+example position might be 0, 0, N, which means the rover is in the bottom
+left corner and facing North.
+In order to control a rover, NASA sends a simple string of letters. The
+possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90
+degrees left or right respectively, without moving from its current spot.
+'M' means move forward one grid point, and maintain the same heading.
+Assume that the square directly North from (x, y) is (x, y+1).
+
+INPUT:
+The first line of input is the upper-right coordinates of the plateau, the
+lower-left coordinates are assumed to be 0,0.
+The rest of the input is information pertaining to the rovers that have
+been deployed. Each rover has two lines of input. The first line gives the
+rover's position, and the second line is a series of instructions telling
+the rover how to explore the plateau.
+The position is made up of two integers and a letter separated by spaces,
+corresponding to the x and y co-ordinates and the rover's orientation.
+Each rover will be finished sequentially, which means that the second rover
+won't start to move until the first one has finished moving.
+
+OUTPUT:
+The output for each rover should be its final co-ordinates and heading.
+
+INPUT AND OUTPUT
+Test Input:
+5 5
+1 2 N
+LMLMLMLMM
+3 3 E
+MMRMMRMRRM
+Expected Output:
+1 3 N
+5 1 E
+
+1108386108
+Newflat@904
+
+findnewflat
+
+find1R00mM@te
+
+
+
+--------------------------------------
+
+
+acer a1810
+lenovo a3000
+
+
+http://www.imdb.com/list/Ec_F8w7KDY0/?ref_=tt_rls_4
+
+
+3. Padhee to pay Abhi - 416/-
+6. Padhee to pay Anuj - 540/-
+7. Padhee to pay Don - 326/-
+9. Padhee to pay Vineet - 2004/- (Including Spa)
+
+bharat gas
+indane gas
+hp
+
+http://subscene.com/subtitles/breaking-bad-fifth-season
+
+https://www.hrworkwaysindia.com/index.jsp
+https://ess.excelityglobal.com/index.jsp
+0047614981
+
+https://contents.tdscpc.gov.in/en/tds-on-sale-property.html
+Your request for download of Form 16B has been submitted. Request Number is 53527650. The file will be available in 'Downloads' section.
+
+Pradeep Kulkarni
+
+http://enquiry.indianrail.gov.in/ntes/
+
+20012839454
+
+http://timesofindia.indiatimes.com/india/23-daily-habits-that-will-make-you-smarter/articleshow/38665516.cms?intenttarget=no&utm_source=TOI_AShow_OBWidget&utm_medium=Int_Ref&utm_campaign=TOI_AShow
+--------------------------------------------
+
+1 
+1
+6
+
+9008153807-kartik
+
+dmat acc no. 
+client id. 28653310 - DP Acc Number
+dp id . IN301151
+551
+ SEBI Regn. No.: INB231109431 (NSE Capital Mkt.) / INB01110943 (BSE Capital Mkt.) / INF231109431 (NSE Derivatives) 
+
+trdacc - 1094105
+username - depadhee
+pwd- 
+39019400 - hdfc sec cust care
+
+Token ID is : 5876 
+
+sh no 8/3
+grnd floor
+kumud nagar
+tulsi beet , sv road
+28787563
+
+chinchpokli, malad
+
+28710627
+--------------------------------------
+
+6.0
+
+www.agodisha.gov.in
+0124048/ps
+
+
+
+> There is something called as Ticker Symbol, which uniquely identifies a security with in an Exchange. Every exchange has its own standard to
+define ticker symbol. e.g. US uses 1 to 4 character alphanumeric. In Europe mostly 3 letter alphabets are used. Asian exchange mostly use numbers. 
+http://en.wikipedia.org/wiki/Ticker_symbol
+
+> Apart from this there is something called as ISIN which is unique across exchanges. 
+http://en.wikipedia.org/wiki/International_Securities_Identifying_Number
+
+> Exchanges use their own identification numbers for settlement and clearing purposes.
+e.g. CUSIP - Used in US and Canada  (http://en.wikipedia.org/wiki/CUSIP)
+	 SEDOL - Used in UK and few European country (http://en.wikipedia.org/wiki/SEDOL)
+	 
+> RIC Code - Used to look up securities only within Reuters Financial Network
+	 
+> Market Identifier Code(MIC) - Unique identification code used to identify securities trading exchanges
+
+Ref: http://www.ksvali.com/2009/02/security-ids-symbol-cusip-isin-sedol-ric-code/
+
+
+61656655
+
+for any online transaction fraud
+bankingombudsman.rbi.org.in/
+
+090011984512513 - citi
+IT74509347 - sbi to maa sbi
+
+app development with xcode
+	 
+	 
+	 9820202571 - dhaval video
+	 
+	 1yr 5410
+	 sd box, instn, grnd sports pkg
+	 
+	 2250
+	 
+	 299043
+	 
+		policy no. 591144664 13/2/99 padmini barpanda 429
+		policy no. 592848268 28/7/04 padmini barpanda 676
+		
+		
+		
+		3100140604
+				
+		admin/admin
+		flat@904
+				
+		02240629629 - tech support tikona
+				
+		l4mz-1vtn-wdy0
+		
+		airindia membership 140112385
+			
+		3017607878-9
+		
+		simpolo(nanopolis) - bed room
+		www.simola.in - drawing
+		
+		rak
+		nyle
+		perlato
+		abcs
+		am2
+		s22
+		
+		mirsil
+		marbella
+		
+		wages
+		murpil
+		
+		sonic-iv
+		sonic lemon (double charge)
+		
+		
+		
+		
+		02266410111
+		
+		suu in changeowner
+		
+		autosys virtual 
+		
+		http://subscene.com/subtitles/the-prestige/english/564066
+		
+		outdo
+		
+		vmias6684
+		
+		kaiser
+		
+		pushpanjali sahu
+		
+		The Hindus: An Alternative History
+		
+		
+		525985
+		
+		sonear, green, mayur, regal
+		
+		PF TCS: MH/BAN/48475/330993
+		PF GLOBEOP: 
+		
+		
+		
+		8890688122
+		
+		59806009 - Avira ref num
+		
+		rest api for java
+		
+		MMT100 
+		
+		
+		http://www.finmarketguru.com/difference-between-depository-and-custodian/
+		http://www.finmarketguru.com/how-settlement-process-at-nse-national-stock-exchange-works/
+		http://www.finmarketguru.com/understanding-the-trade-lifecycle/
+		
+		
+		I want you to have big dreams, big goals. I want you to strive to achieve them.... 
+		
+		http://architects.dzone.com/articles/apache-cxf-vs-apache-axis-vs
+		
+		Sushrita Pujari
+		Flat No- GF6
+		MALIBU HOMES 1
+		SAIBABA TEMPE ROAD,
+		KUNDANHALLY GATE, GREEN GARDEN LAYOUT, BANGALURU - 560037
+		
+		
+		http://sql-plsql.blogspot.in/2009/04/sql-group-by-examples.html
+		
+		20012839454 
+		
+		a, b
+		
+		a b c
+		a b shorter older  a < b,c
+		b c yungr shortr b 
+		a c tall yungr
+		
+		http://homepage.cs.uiowa.edu/~hzhang/c31/notes/
+		https://www.cs.uiowa.edu/~hzhang/c31/notes/heapsort.ppt
+		http://ee.hawaii.edu/~tep/EE160/Book/chap10/subsection2.1.2.1.html
+		http://www.princeton.edu/~achaney/tmve/wiki100k/docs/Merge_sort.html
+		https://www.cse.ust.hk/~dekai/271/notes/L01a/quickSort.pdf
+		https://www.cs.auckland.ac.nz/~jmor159/PLDS210/qsort.html
+		
+		
+		https://www.cs.cmu.edu/~pattis/15-1XX/15-200/lectures/trees/lecture.html
+		
+		http://cprogrammingcodes.blogspot.in/2012/02/merge-sorting.html
+		http://www.programmingsimplified.com/c/source-code/c-program-bubble-sort
+		http://www.programmingsimplified.com/c/source-code/c-program-selection-sort
+		http://www.programmingsimplified.com/c/source-code/c-program-insertion-sort
+
+		tendulkar book
+		
+		
+		\
+		13747545 - Airtel myplan change id
+		
+		
+		
+		http://uanmembers.epfoservices.in/
+		100131252807
+		
+		
+		Â
+		
+		debaswarup.padhee@outlook.com - 9004999586 - 0 gocash - 25SepLonavla - 21AugNandhana - 10JulFlight
+		debaswarup.padhee87@outlook.com - 9167193661 - 
+		debaswarup.padhee87@gmail.com - 9619519666 - 195 - 27SepFlight - 26SepLonavla - 21AugFlight - 24JulFlight - 24JulNand - 10JulNand
+		 debaswarup.padhee@gmail.com - ---------------- 24SepFlight
+		  debsush2015@gmail.com - 7718099586 - Aug9Flight
+		  debaswarup.padhee09@gmail.com - -  No booking
+		  sushdeb2015@gmail.com - 8108579749 -  No booking
+		  sushrita.pujari18@gmail.com - 8884698407 - 533 gocash - booking - 24AugFlight - 7AugNand - 26JulFlight - 12JulFlight
+		  
+		  debaswarup.padhee87@gmail.com - 30Nov Symphony Palms Beach Resort, Havelock
+		  sushrita.bangalore@gmail.com - 3Dec, 4dec Megapode, 
+		  sushrita.pujari18@gmail.com - 28Dec, 2Dec Megapode, 1Dec Symphony Palms Beach Resort, Havelock
+		
+		8136A1
+		
+		
+		5706756118
+
+SBIN0007978
+
+20012839454		
+
+Tikona - 1114321088
+Jul@2015
+===================
+
+Vondh Stores, Kandivali, Shop No.9, Ananth Apartments, Thakur Complex, Kandivali (E), Mumbai, Maharashtra, 400101 India 
+
+653658 
+
+Qsn to anmesh
+how to pay 
+
+blue dart 60197951354
+000011
+
+
+Please note this Transaction ID for any future queries pertaining to your payment status. 1114321088TPC171115082703 
+
+
+7208727071
+
+
+PSK, Ground and 1st floor, A-119, Unit-8, Nayapalli, Bhubaneswar, Odisha-751012
+
+debaswarupsushrita12@gmail.com
+priyam12KISH15
+
+
+18602665555
+
+665.30
+
+ NPS Reference No 39895. 
+
+spm622
+
+
+
+1 photo
+
+
+
+
+a 200 125  200 - 125 - (-50)*75/300=12.5 = 87.5*4 = 350
+b 200 125
+c 200 125
+d 200 125
+
+pl1 - 400							Ticket 400 + 100 = 500
+a 100  125						
+b 100  0
+c 100  0
+d 100  125
+
+pl2 - 200 - 100
+a 50  0
+b 50  125
+c 50  125
+d 50  0
+
+
+
+Owner
+Sadaf
+Mobile: 9902728515
+
+86 Locality Photos
+12,000
+
+1 BHK Builder Floor 500 sqft
+in Koramangala Block 4 See on map
+Posted: 23rd Sep
+Details1 Bath , Unfurnished, 3rd Floor (of 4), 1 Car Parking
+StatusImmediately Available
+
+
+
+saswat mohanti(siku)
+09886119200
+
+
+http://www.quikr.com/homes/listing/1-bhk-semi-furnished-apartment-of-700sqft-for-rent-in-koramangala-bangalore-by-broker-248544204
+
+
+
+http://bangalore.quikr.com/1bhk-furnished-flat-for-rent-in-Murgeshpalya-W0QQAdIdZ248671318?utm_source=a-nestoria&utm_medium=banner&utm_campaign=apartments-rent-lease
+http://www.makaan.com/bangalore-east-property/old-airport-road-property/1bhk-apartment-for-rent-in-old-airport-road/map-property-details/4063910/
+http://bangalore.quikr.com/1bhk-flat-for-rent-at-Ready-to-move-at-just-14k-W0QQAdIdZ247916420?utm_source=a-nestoria&utm_medium=banner&utm_campaign=apartments-rent-lease
+
+http://bangalore.quikr.com/2-bhk-flat-for-rent-in-murgeshpalaya-for-rent-18000-W0QQAdIdZ223383743?utm_source=a-nestoria&utm_medium=banner&utm_campaign=apartments-rent-lease
+
+http://bangalore.quikr.com/2-BHK-Semi-Furnished-Flat-FOR-RENT-IN-Wind-Tunnel-road-MURUGESHPALYA-W0QQAdIdZ245109542?utm_source=a-nestoria&utm_medium=banner&utm_campaign=apartments-rent-lease
+
+[1/26/2016 7:31:18 PM] debaswarup padhee: power back up
+[1/26/2016 7:31:20 PM] debaswarup padhee: lift
+[1/26/2016 7:31:22 PM] debaswarup padhee: floor
+[1/26/2016 7:31:28 PM] debaswarup padhee: security parking wardrobe modular western toilet
+
+
+Mahesh - 2bhk - 17k - 7899739857
+kumar-7760688808
+Kamlesh (Individual) - 9844055812
+  
+Raj Shekar 
+Brokerage: 30 days rent
+9886497301
+
+9620413113
+  
+  
+  
+  https://www.youtube.com/watch?v=FLcXf9pO27w
+  
+  
+  13k
+  jaydevan
+  
+  Raja
+  http://www.nobroker.in/property/2-BHK-apartment-for-rent-in-Murugeshpalya-bangalore-for-rs-15000/ff80818151669a4001517bfc6d833030/detail
+  
+  Vanaja
+  http://www.nobroker.in/property/2-BHK-apartment-for-rent-in-Murugeshpalya-bangalore-for-rs-17000/ff80818151e2b20e0151e35d41f90a30/detail
+  
+  
+  Shree Sai realstate - James
+  8095650269 
+  
+  vanaja accountant
+  09642236092- munaswamy reddy
+  
+  
+  lift power backup
+  security
+  apartment
+  
+  exhaust fan
+  kitchen vantilation
+  maintnce
+  
+  
+  
+  lift backup
+  24hr backup
+  inverter- electrician
+  rent
+  no brokrg
+  agreemt
+  western toilet
+  
+  name 
+  company name
+  
+  1lakh
+  
+  10thsnd
+  
+  
+  water supply
+  24hr
+  borewell
+  powerbackup 24hr
+  securityguard
+  no maintenance
+  how many floors - 
+  owner rahuche - family or bachelor
+  wester toilet
+  modular kitchen
+  wardrobe
+  
+  TokenAmtDebMumbai
+  
+  
+  http://tipsforrtobangalore.blogspot.in/
+  http://mahatranscom.in/trans_noobjection.aspx
+  http://mahatranscom.in/lic_valid_document.aspx
+  
+  gaswala
+  packers
+  2 cylinder
+  sat sun
+  subsidy
+  pressure cooker thik
+  
+  24hr
+  sunday
+  ANANTH GAS AGENCIES   	INDANE GAS ROAD BEHIND HAL HOSPITAL HAL OLD TOWNSHIP BANGALORE 560017   	25230476 / 25231196/ 25230459   
+  
+  http://www.justdial.com/Mumbai/Lords-International-Packers---Movers-%3Cnear%3E-Opposite-IIT-Market--Near-Kanjurmarg-Station-Powai/022PXX22-XX22-150213135820-A3Y3_BZDET?xid=TXVtYmFpIExvcmQgUGFja2VycyBNb3ZlcnM=#rvw
+  
+  shweta chopra
+  8600022444
+  
+  
+  c2c@quickr.com
+  
+  http://npstrust.org.in/
+  https://cra-nsdl.com/CRA/
+  110027148920
+  
+  http://mahatranscom.in/office.aspx
+  http://www.carwale.com/forums/9389-guidelines-to-get-noc-of-the-vehicle-and-get-it-re-registered.html
+  https://transientsdiary.wordpress.com/2013/05/04/vehicle-transfer-noc/
+  
+  
+  
+      
+
+
+Please note: As per the RBI guidelines on address change, you are required to submit an address proof to the Bank at the earliest. We therefore request you to submit a self-attested address proof, along with a letter confirming your Name, Address and Banking Accounts / Credit Card numbers.
+
+Document submission can be done through any of the following options:
+1. Upload the documents online.
+2. Mail the documents to Citibank, N.A., Mail Room, No.2 Club House Road, Chennai 600 002, India.
+3. Visit Your nearest citibank branch or NRI Service Center. 
+ 
+Close this window      
+    
+http://www.rediff.com/getahead/slide-show/slide-show-1-gadgets-and-gaming-whici-water-purifier-is-right-for-you-reverse-osmosis-ultra-violet/20101215.htm#6	
+    
+    
+    
+5706756118 
+
+08044444121
+198
+
+address changes
+
+http://bangalore.quikr.com/Wooden-shoe-rack-3-shelf-W0QQAdIdZ254112635
+http://bangalore.quikr.com/Wooden-shoe-rack-W0QQAdIdZ257816561
+
+20012839454 
+
+why selling
+negotiable
+strong enough
+
+
+Transaction ID:DS0204161000333518 
+
+
+Luminous
+ref 4002122926
+9066943592- Dilip
+9686744984 - Venkat 
+
+Airtel account NUm = 7026274524
+
+
+http://gopuramproducts.com/Productsview/386/Copper_Homa_Kundam/Brass_Pooja_Items.html
+https://www.google.co.in/search?q=pooja+homa+kund+bangalore&spell=1&sa=X&ved=0ahUKEwj4qePV_snMAhWJuo4KHSX1AHYQBQgZKAA&biw=1366&bih=674	
+http://www.avira.com/en/renewal-avira-antivirus-premium?x-auth=aWRfcGtnPTU4NjQzNzUmaWRfY3R0PTMwMDQyODEzOTkmYXV0aD0xJmFjcz0yMjk2ODMxNzc%3D&x-a-source=IPMPaid&x-a-medium=3916&x-a-version=1846&x-a-item=Before_10&x-a-convcat=renew&u-data=c2FsdXRhdGlvbj1Nci4mZmlyc3RuYW1lPURlYmFzd2FydXAmbGFzdG5hbWU9UGFkaGVlJnJlbWFpbmluZ19ydW50aW1lPTkuODY3MTQxMjAzNzAzNyZ1c2VkX3J1bnRpbWU9MjAxMy0wMy0xMiswNCUzQTI1JTNBMjImdmFsaWRfdW50aWw9MjAxNi0wNS0zMSZydW50aW1lPTI0JnVzZXJzPTEmcHJvZHVjdD00OTQmbGljZW5zZW5vPSZpc19wcm9tbz0wJmFjcz04NTAyOTU2ODM%3D
+
+
+
+https://www.youtube.com/watch?v=BOkBrurM9G4
+
+
+NPS Contributions (Section 80CCD) : Copy of the stamped deposit receipt, paid during current financial year and copy of the Passbook with clear mention as NPS (National Pension System) Account.
+
+
+http://stackoverflow.com/questions/5898104/how-to-optimally-divide-an-array-into-two-subarrays-so-that-sum-of-elements-in-b
+http://www.geeksforgeeks.org/dynamic-programming-set-18-partition-problem/
+http://www.geeksforgeeks.org/amazon-interview-experience-set-287-on-campus/
+https://www.google.co.in/search?q=amazon+interview+questions&ie=utf-8&oe=utf-8&client=firefox-b&gfe_rd=cr&ei=JC2mV6_uLqLG8Af9g6D4Bw
+
+
+https://pgi.billdesk.com/pgidsk/pgijsp/sbicard/SBI_card.jsp?userAction=trackPayment
+
+
+http://www.msn.com/en-in/money/topstories/transfer-of-pf-money-gets-easier/ar-AAiTmQC?li=AAggbRN&ocid=iehp
+
+
+http://www.consumercomplaints.in/complaints/rohan-builders-bangalore-bangalore-karnataka-c644450.html
+
+
+
+
+om jagyon pabitam paramam pradhanam 
+
+http://www.credaibengaluru.com/members.html
+
+https://piratebaymirror.eu/s/?q=westworld&category=0&page=0&orderby=99
+
+
+9886441439- krishnan kumar
+
+floor
+water supply
+security guard
+power back up
+2 bath - western/indian
+march
+
+
+
+We are pleased to announce rollout of our new CitiPhone helpline number 1860 210 2484. You can reach us on this number from anywhere in India. No more hassle of remembering City specific call in numbers.
+
+Clients calling us from outside India can reach us on +91 22 49552484.
+
+
+
+https://www.youtube.com/watch?v=1n5XPFcvxds
+
+
+https://www.pawanhans.co.in/upload/PHHL/MainMenuEnglishLevel-4_kedarnath_Brouchure.pdf
+http://www.gmvnl.in/newgmvn/helicopter%20service.aspx
+Mis Garhwal MandalVikas Nigam Ltd.
+https://www.justdial.com/Bangalore/Garhwal-Mandal-Vikas-Nigam-Ltd-Above-Vijaya-Bank-K-H-Road/080P3212056_BZDET
+
+
+thermometer, balm for muscles/joints, adhesive rolls, band-aids, cold cream, bandages, antiseptic ointment and medicines prescribed by the doctor.
+
+Chardham trip:
+Yamunotri Route Map: Rishikesh – Narendra Nagar – Chamba – Brahmkhal – Barkot – Hanuman Chatti – Phool Chatti – Janki Chatti – Yamunotri
+Gangotri Route Map: Barkot – Uttarkashi – Gangotri
+Kedarnath Route Map: Uttarkashi – Guptkashi – Kedarnath
+Badrinath Route Map: Kedarnath – Pipalkoti – Badrinath
+
+
+Gangotri trip:
+Day 1: Haridwar - Uttarkashi (190kms/6hr)
+Early morning Drive to Uttarkashi. On Arr. Uttarkashi, Check in Hotel. 
+Later at evening visit Lord Vishwanth Temple. Dinner & Night halt. 
+Uttarkashi: Situated at the bank of river Bhagirathi. 
+The temple of Lord Vishwanath is located here where a massive iron trident is erected. 
+The other important temples situated here are Ekadash Rudra, Bhairav, Gyaneshwar and Goddess Kuteti Devi 
+Day 2: Uttarkashi - Gangotri – Uttarkashi (200kms/8hr)
+Early morning, Drive to Gangotri enroute visit Gangnani. 
+Arr. Gangotri, Check in Hotel. Later visit Gangotri Temple. 
+Overnight stay at Uttarkashi. 
+Day 3: Uttarkashi –  Haridwar (190kms/6hr)
+Today checkout from hotel and depart to Haridwar. On Arr. Haridwar, Drop at Railway Station.
+
+
+1. Haridwar – Barkot (210kms/7-8hr)  HT : 1352 MTS. 25t may
+2. Barkot – Yamunotri – Barkot {36kms drive & 6kms Trek (one side)}   26th may
+3. Barkot to Gangotri via Uttarkashi 27th may
+4. Gangotri to rudrapayag 28th may
+5. rudraprayag to badrinath 29th may
+6. badrinath to auli 30th may
+7. auli to rudrapayag  31st May
+
+badrinath:
+saraswati river
+auli - chenab lake
+
+http://www.holidayiq.com/hotels/kedarnath/
+
+Senik Hotel
+9720657051
+avishek guest house
+8979030733
+
+hotel punjab sindh
+costly - 
+
+Yatra Holidays - not going kedarnath
+Gaylord Travels - 25000
+
+robber's cave/gucchhuu pani
+kempty falls
+
+
+1426790409 
+R1426790409
+R1665781413
+
+
+eno
+hazmola
+zofer
+vomit
+
+
+FATCA NPS
+Acknowledgement Id 16199696
+Acknowledgement Date 04/06/2017
+
+
+
+0150855378 - aqua guard ticket num
+08046636363 - aqua guard num
+08039883333 - aqua guard num
+
+C:\Program Files\Dell\DW WLAN Card;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\
+Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\Program Files\Java\jdk1.8.0_60\bin;C:\Program Files\Skype\Phone\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Utilities 1.6\
+
+C:\Program Files\Java\jdk1.8.0_60\include\win32;C:\Program Files\Java\jdk1.8.0_60\include;E:\LEARNING\zeromq-4.2.1\include;
+C:\Program Files\ZeroMQ 4.0.4\lib;
+
+Act
+102016207353
+ib64wu
+
+https://www.careercup.com/page?pid=jp-morgan-interview-questions
+
+cc.disputes@hdfcbank.com
+cc- rajesh
+
+15 Sep 2017 POS 416021XXXXXX4059 MVisa-mVisa: ACT POS DEBIT 725817932965  15 Sep 2017 1,227.59   105,162.04 
+
+102016207353
+
+20012839454
+
+reversal 124752535228
+serena.mathew@hdfcbank.com - hdfc head
+senthilkumar.venkatachalam@hdfcbank.com - Rajesh's boss
+mira
+
+sbi 125181314395
+
+https://www.quora.com/Where-can-I-buy-a-cheap-windows-10-licence-key-where-I-can-pay-in-Indian-rupees-online
+
+---------------------------
+Disk Management
+---------------------------
+The operation failed to complete because the Disk Management console view is not up-to-date.  Refresh the view by using the refresh task. If the problem persists close the Disk Management console, then restart Disk Management or restart the computer.
+---------------------------
+OK   
+
+https://answers.microsoft.com/en-us/windows/forum/windows_vista-performance/disk-management-console-view-is-not-up-to-date/42b1ebc3-edaf-4c3f-93cd-beda4bab2671?auth=1
+---------------------------
+
+
+softwares:
+ShareIt
+webshot
+onedrive
+calibre
+
+
+LSBI5904229118
+
+Hemanth.Jayaram@hdfcbank.com
+rajeshg24187@gmail.com
+623524274
+
+https://pirateproxy.ist/tv/

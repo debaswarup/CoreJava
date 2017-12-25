@@ -1,0 +1,164 @@
+Oracle
+---------------------------------------------------------------------------------------------
+1	1	Suraj		Mining Col
+2	2	Dambru		Mining Col
+3	3	Anshumaan		Majhi Col
+4	4	Gokula		PNT Col
+5	5	Rashmi		PNT Col
+6	6	Nihar		  Rengali Col
+7	7	Swagat		Rengali Col
+
+
+select address,max(SYS_CONNECT_BY_PATH(st_name,',')) from
+(select address,st_name,row_number() over (partition by address order by st_name) as curr,
+row_number() over (partition by address order by st_name) - 1 as prev from student) 
+group by address
+start with curr = 1
+connect by prev = prior curr and address = prior address
+------------------------------------------------------------------------------------------
+http://www.oracle-base.com/articles/misc/string-aggregation-techniques.php
+------------------------------------------------------------------------------------------
+http://stackoverflow.com/questions/468990/how-can-i-combine-multiple-rows-into-a-comma-delimited-list-in-oracle
+---------------------------------------------------------------------------------------------
+http://docs.oracle.com/cd/B19306_01/server.102/b14200/functions164.htm
+
+http://docs.oracle.com/cd/B19306_01/server.102/b14200/queries003.htm#i2053935
+
+http://www.oracle-base.com/articles/misc/string-aggregation-techniques.php
+-------------------------------------------------------------------------------------------------
+................................................RDBMS Start...................................................
+Functional Dependency - { A -> B}
+Trivial Dependency - { (A,B) -> B}
+Transitive dependency - A->B ……. B->C …….  A->C
+Multivalued Depenency -  X ->> Y
+t1[a] = t2[a] = t3[a] = t4[a]
+t3[b] = t1[b] and t3[R-b] = t2[R-b]
+t4[b] = t2[b] and t4[R-b] = t1[R-b]
+Ex - Course  Book  Lecturer
+----------------------------------------------------
+4th Normal Form - 
+Ø Every multi valued dependency is trivial
+Ø For every non trivial Multi vaued dependency X->>Y , X is a super key….. 
+----------------------------------------------------
+1NF - Each cell must have one value & no repeating groups
+
+2NF: Every non-primary key Attribute is fully functionaly dependent on primary key. i.e. Remove
+partially dependency.
+
+3NF: Dependent on primary key. i.e. Remove transitive dependency.
+
+BCNF: Boyce Codd Normal Form: Every determenent is a candidate key. 
+for every FD X A, X must be a candidate key..
+
+4NF---->5NF: Higher Normal Form
+---------------------------------------------------------------
+3NF - 
+Tournament | Year |	Winner | DateOfBirth
+
+Tournament	Year	Winner
+
+Winner	DOB
+----------------------------------------------------------------
+Domain/key normal form (DKNF) is a normal form used in database normalization which requires that the database contains no constraints other than 
+domain constraints and key constraints.A domain constraint specifies the permissible values for a given attribute, while a key constraint specifies 
+the attributes that uniquely identify a row in a given table.
+------------------------------------------------------------------
+Join Dependency - 
+A table T is subject to a join dependency if T can always be recreated by joining multiple tables each having a subset of the attributes of T. 
+If one of the tables in the join has all the attributes of the table T, the join dependency is called trivial.
+{ order-number, customer-name, pizza-name, delivery-boy }. 
+-------------------------------------------------------------------
+1. Partial Key: It is a set of attributes that can uniquely identify weak entities and that are related to same owner entity. 
+   It is sometime called as Discriminator. 
+2. Alternate Key: All Candidate Keys excluding the Primary Key are known as Alternate Keys. 
+3. Artificial Key: If no obvious key, either stand alone or compound is available, then the last resort is to simply create a key, 
+   by assigning a unique number to each record or occurrence. Then this is known as developing an artificial key. 
+4. Compound Key: If no single data element uniquely identifies occurrences within a construct, then combining multiple elements to create a unique identifier 
+   for the construct is known as creating a compound key. 
+5. Natural Key: When one of the data elements stored within a construct is utilized as the primary key, then it is called the natural key.
+--------------------------------------------------------------------------
+
+Transaction Management
+
+Dirty Read - Reading uncommitted data.
+NonRepeatable Read - Reading a data at T1 time and reread the same data at T2 time, which might have been modified,deleted.
+Phantom Read - Reading some records as per your query at time T1 and executing same query at time T2 fetching more records.
+
+http://www.oracle.com/technetwork/issue-archive/2005/05-nov/o65asktom-082389.html
+
+Isolation Levels____Dirty Read______NonRepeatable Read______Phantom Read_____
+READ_UNCOMMITTED	  Y				  Y						  Y				|
+READ_COMMITTED		  N				  Y						  Y				|
+REPEATABLE_READ		  N				  N						  Y				|
+SERIALIZATION		  N				  N						  N				|
+____________________________________________________________________________| 
+
+---------------------------------------------------------------------------------------------------------------
+ 
+................................................RDBMS End...................................................
+
+What is a view? Can a view update the original table?
+	When you want data from multiple table joins and do not want to create a new table, you can go for creating a view, where only the query is stored on database 
+	rather than the actual data. Every time you query the view, it will execute the stored query.
+	View can update master table if it involves only one table. However, if it contains join of multiple tables, the it can not update master table.
+
+what is materialized view?
+	Materialized view is same as view, the only difference being, here the actual data is stored on a table. Benefits being, query complex joins not required to
+	be resolved every time we query the view. On timely manner, when the query is refreshed, the data are modified accordingly and stored on the materialized table.
+
+	3 types of materialized views are there.Read-Only, Updatable, Writable
+	Read-Only - CREATE MATERIALIZED VIEW hr.employees AS
+				SELECT * FROM hr.employees@orc1.world; (NO DML)
+				
+    Updatable - CREATE MATERIALIZED VIEW hr.departments FOR UPDATE AS
+				SELECT * FROM hr.departments@orc1.world	
+				This kind of view can update the master table on create or refresh, only if it belongs to a materialized view group.
+	
+	Writable - This is same as Updatable, however it doesnot belong to materialized view group. So you can perform DML operations, but if you refresh view, 
+				then the changes are not pushed back onto master table and they remain lost in the view.
+	
+	http://docs.oracle.com/cd/A97630_01/server.920/a96567/repmview.htm
+	NOTE: materialized view only allow select or DML statements, No DDL statement is permitted.
+--------------------------------------------------------------------------------------------------
+
+
+Difference between sybase and oracle
+
+------------------------------
+
+oracle performance tuning
+/*FIRST_ROWS*/
+hint
+parrallel
+
+-----------------------------------
+
+With clause oracle-
+
+WITH dept_count AS (
+  SELECT deptno, COUNT(*) AS dept_count
+  FROM   emp
+  GROUP BY deptno)
+SELECT e.ename AS employee_name,
+       dc1.dept_count AS emp_dept_count,
+       m.ename AS manager_name,
+       dc2.dept_count AS mgr_dept_count
+FROM   emp e,
+       dept_count dc1,
+       emp m,
+       dept_count dc2
+WHERE  e.deptno = dc1.deptno
+AND    e.mgr = m.empno
+AND    m.deptno = dc2.deptno;
+
+------------------------------------------
+
+Difference between sybase and oracle
+1. @ syntax for local variable.
+2. := assignment in oracle where as = in sybase
+3. SP have facility of creating temporary tables and drop them at the end in sybase.
+http://www.geekinterview.com/question_details/39984
+
+-------------------------------------------
+
+sybase coalesce

@@ -1,0 +1,11 @@
+Tree
+
+InOrderTraversal:
+left->parent->right
+preorder:
+parent->left->right
+postorder:
+left->right->parent
+
+
+====================================================================================

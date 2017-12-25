@@ -1,0 +1,20 @@
+Why to use optional instead of null
+To avoid nullpointer exception and follow a good programming practice.. Developer would be sure of what value he is passing
+Optional
+Optional.of(new Integer(10))
+Optional.get();
+guava versions
+optional.isPresent()
+
+//Optional.fromNullable - allows passed parameter to be null.
+Optional<Integer> a = Optional.fromNullable(value1);
+      
+//Optional.of - throws NullPointerException if passed parameter is null
+Optional<Integer> b = Optional.of(value2);	
+
+//Optional.or - returns the value if present otherwise returns
+//the default value passed.
+Integer value1 = a.or(new Integer(0));
+
+Preconditions.checkArgument(input > 0.0,"Illegal Argument passed: Negative value %s.", input);
+Preconditions.checkNotNull(a, "Illegal Argument passed: First parameter is Null.");

@@ -1,0 +1,236 @@
+hackerrank
+ideserve
+
+> OSI Model
+	Application - User authentication, privacy, web browsers, HTTP, FTP, Telnet
+	Presentation - Ecryption/Decryption of Data, ASCII, GIF, JPEG, MPEG
+	Session - Establishes, manages, terminates connections Ex. RPC, SQL
+	Transport - Provides transparent transfer of data between end systems, or hosts, and is responsible for end-to-end error recovery and flow control. 
+				It ensures complete data transfer.
+				Ex-TCP, UDP
+				TCP is a connection-oriented protocol, 
+				which means a connection is established and maintained until the application programs at each end have finished exchanging messages. 
+				It determines how to break application data into packets that networks can deliver, 
+				sends packets to and accepts packets from the network layer, manages flow control, 
+				and—because it is meant to provide error-free data transmission—handles retransmission of dropped or garbled packets 
+				as well as acknowledgement of all packets that arrive.
+				
+				For example, when a Web server sends an HTML file to a client, it uses the HTTP protocol to do so. 
+				The HTTP program layer asks the TCP layer to set up the connection and send the file.  
+				The TCP stack divides the file into packets, numbers them and then forwards them individually to the IP layer for delivery. 
+				Although each packet in the transmission will have the same source and destination IP addresses, packets may be sent along multiple routes. 
+				The TCP program layer in the client computer waits until all of the packets have arrived, then acknowledges those it receives 
+				and asks for the retransmission on any it does not (based on missing packet numbers), 
+				then assembles them into a file and delivers the file to the receiving application.
+				https://teamtreehouse.com/community/difference-between-http-and-tcpip-protocols
+				https://www.diffen.com/difference/TCP_vs_UDP
+				
+	Network - Provides switching and routing technologies, creating logical paths, known as virtual circuits, for transmitting data from node to node.
+				Ex - IP
+	Datalink - At this layer, data packets are encoded and decoded into bits
+				The data link layer is divided into two sub layers: The Media Access Control (MAC) layer and the Logical Link Control (LLC) layer. 
+				The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it.
+	Physical - This layer conveys the bit stream - electrical impulse, light or radio signal — 
+				through the network at the electrical and mechanical level. 
+				It provides the hardware means of sending and receiving data on a carrier, including defining cables, cards and physical aspects.
+	
+> RPC vs RMI
+	RPC - Remote Procedure Call, JAXWS
+	http://stackoverflow.com/questions/2728495/what-is-the-difference-between-java-rmi-and-rpc
+	https://docs.oracle.com/javase/tutorial/rmi/ 
+	RMI is not used popuarly now a days because of tight coupling between server and client.
+	
+> TCP is one of the main protocols in TCP/IP networks. 
+	Whereas the IP protocol deals only with packets, TCP enables two hosts to establish a connection and exchange streams of data. 
+	TCP guarantees delivery of data and also guarantees that packets will be delivered in the same order in which they were sent.	
+	
+> 	
+http://www.programmerinterview.com/index.php/database-sql/find-nth-highest-salary-sql/
+SELECT * /*This is the outer query part */
+FROM Employee Emp1
+WHERE (N-1) = ( /* Subquery starts here */
+SELECT COUNT(DISTINCT(Emp2.Salary))
+FROM Employee Emp2
+WHERE Emp2.Salary > Emp1.Salary)
+
+> Difference between \r and \n
+\r = CR (Carriage Return) // Used as a new line character in Mac OS before X
+\n = LF (Line Feed) // Used as a new line character in Unix/Mac OS X
+\r\n = CR + LF // Used as a new line character in Windows
+
+===========================================================================
+
+https://engineering.linkedin.com/developer-productivity/quick-deploy-distributed-systems-approach-developer-productivity
+
+==========================================================================
+
+http://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly
+
+========================================================================
+
+http://www.geeksforgeeks.org/amazon-interview-experience-set-325/
+http://www.geeksforgeeks.org/largest-sum-contiguous-subarray/
+http://www.geeksforgeeks.org/divide-and-conquer-maximum-sum-subarray/
+
+===========================================================================
+Flipkart problem
+Washing machine classes
+
+===========================================================================
+
+http://www.geeksforgeeks.org/amazon-interview-experience-set-325/
+=============================================================================
+
+when we add a reference to a list then even if we point that reference to a new object later on, the list still contains the old object.
+
+http://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value?rq=1
+
+==================================================================
+
+http://www.javamex.com/tutorials/synchronization_volatile.shtml
+
+========================================================================
+Sorting algorithms:
+http://quiz.geeksforgeeks.org/insertion-sort/
+http://quiz.geeksforgeeks.org/selection-sort/
+http://quiz.geeksforgeeks.org/bubble-sort/
+http://quiz.geeksforgeeks.org/merge-sort/
+http://quiz.geeksforgeeks.org/quick-sort/
+http://www.geeksforgeeks.org/timsort/
+
+https://stackoverflow.com/questions/1278243/stability-of-quicksort-partitioning-approach
+
+http://www.geeksforgeeks.org/time-complexities-of-all-sorting-algorithms/
+https://en.wikipedia.org/wiki/Sorting_algorithm
+
+========================================================
+
+JPA vs Hibernate
+http://stackoverflow.com/questions/9881611/whats-the-difference-between-jpa-and-hibernate
+
+====================================================
+
+ClassNotFound vs NoClassDefFound
+https://stackoverflow.com/questions/1457863/what-causes-and-what-are-the-differences-between-noclassdeffounderror-and-classn
+https://dzone.com/articles/java-classnotfoundexception-vs-noclassdeffounderro
+
+NoClassDefFoundError is a linkage error basically. It occurs when you try and instantiate an object (statically with "new") 
+and it's not found when it was during compilation.
+
+ClassNotFoundException is more general and is a runtime exception when you try to use a class that doesn't exist. 
+For example, you have a parameter in a function accepts an interface and someone passes in a class that implements that interface 
+but you don't have access to the class. It also covers case of dynamic class loading, such as using loadClass() or Class.forName().
+This occurs mostly during reflection calls (class.forName())
+
+===========================================================
+
+http://javarevisited.blogspot.in/search/label/FIX%20protocol%20tutorial?updated-max=2011-03-05T19%3A22%3A00-08%3A00&max-results=6#PageNo=2
+
+design a connection pool
+
+http://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java
+http://www.journaldev.com/4098/java-heap-space-vs-stack-memory
+
+http://stackoverflow.com/questions/9552218/how-many-string-objects-using-new-operator
+
+====================================================================================
+
+HashMap LoadFactor, rehashing
+http://stackoverflow.com/questions/10901752/what-is-the-significance-of-load-factor-in-hashmap
+https://www.tutorialspoint.com/java/util/hashtable_rehash.htm
+
+Strong reference: Object which can not be garbage collected. ex. StringBuilder s1 = new StringBuilder();
+Weak reference: Object which can be garbage collected unless it is referred by at least one strong ref. 
+ex. WeakReference<StringBuilder> ws = new WeakReference(new StringBuilder());
+Can be used for caching, listener obj
+Soft reference: Type of weak ref but Object will not be garbage collected till memory is available.
+Phantom ref: Can be garbage collected immediately. This is used in the GC clean up process and 
+refers to an object which isn't accessible to "normal" code because its in the process of being cleaned up.
+http://stackoverflow.com/questions/9809074/java-difference-between-strong-soft-weak-phantom-reference
+http://docs.oracle.com/javase/7/docs/api/java/util/WeakHashMap.html
+
+https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
+
+https://www.youtube.com/watch?v=KTC0g14ImPc
+https://www.youtube.com/results?search_query=soft+reference
+
+======================================================================================
+Enumeration, Vector, Bitset
+https://www.tutorialspoint.com/java/java_data_structures.htm
+
+======================================================================================
+
+Working with MySql:
+https://dev.mysql.com/doc/refman/5.7/en/windows-installation.html
+https://dev.mysql.com/downloads/file/?id=470091
+http://www.wikihow.com/Create-a-Database-in-MySQL
+
+==============================================
+
+Spring JPA Hibernate
+http://howtodoinjava.com/jpa/spring-hibernate-jpa-configuration-example/
+http://www.byteslounge.com/tutorials/spring-jpa-hibernate-example
+
+9535528965
+
+Spring autowiring, @component, @reposiroty
+http://howtodoinjava.com/spring/spring-core/how-to-use-spring-component-repository-service-and-controller-annotations/
+http://www.dineshonjava.com/2012/07/stereotype-annotations-in-spring.html
+
+=======================================================================================
+http://www.geeksforgeeks.org/dynamic-programming-set-7-coin-change/
+
+=============================================================================
+
+Google Protocol Buffer:
+> Language and Platform independent way of encoding data.
+> Efficient encoding(faster)
+> Automatically-generated parsing code
+> 3-10x smaller than xml and 20-100x faster while parsing
+> Can be used for smaller devices with less resources (RAM)
+> Not designed for large data set(>1MB)
+> In binary format hence not human readable OR editable.
+> Proto buf messages are defined in .proto as a text file.
+> .proto is compiled using protoc to generate data access classes.
+> Data access class provide simple access to read/write fields, methods to serialize/parse strutures to/from raw bytes.
+> foo.proto -> protoc -> foo_pb.py
+> Datatypes: double, float, string, bool, bytes, enum, int32 for positive values, sint32 for negative values
+> Messages can be nested
+> Messages can be used as field in other message.
+> proto3 supports JSON encoding like binary encoding which was there in proto2. Hence message can be encoded to JSON.
+> Message definition can be imported from other .proto files.
+> Example:
+	message Student
+	{
+		uint32 rollNum   = 1;
+		string name      = 2;
+		enum Gender
+		{
+			MALE = 0;
+			FEMALE = 1;
+			ANY = 3;
+		}
+		Gender gender    = 3;
+	}
+> TagId is required for every tag. Default values are supported, can be null if value not specified. But TagId is mandatory.
+> Ignores extra fields. Meaning if there is a Old client who is using old version of the deployed message which contains a field and the fied is no more part of the new message. Then when we send proto msg to old client, it will simply consider that field as NULL. Old client will also ignore any new fields added.
+There is no explicit version check.
+
+========================================================================================
+
+ZeroMQ:
+https://www.youtube.com/watch?v=v6AGUeZOVSU
+
+============================================================================================
+
+MicroServices:
+https://en.wikipedia.org/wiki/Microservices
+
+=======================================================================================
+
+https://en.wikipedia.org/wiki/WebSocket
+socket.io
+
+======================================================================================
+
+elasticsearch

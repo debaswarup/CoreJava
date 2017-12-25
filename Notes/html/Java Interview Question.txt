@@ -1,0 +1,210 @@
+1.	What is JIT compiler.
+	Ans- It converts class/bytecode file to machine language in an efficient way.
+
+2.	Order of modifier does not matter. 
+	a.	Public static void main is same as static public void main
+	
+3.	Difference between Object oriented and Object based language.
+	a.	Java script is a Object based language where we use pre defined objects where as in Java we create our own Classes and Objects.
+
+4.	Bydefault all instance variable are initialized as 
+	a.	The default value of the datatype if it is of primitive datatype
+	b.	Null if it is a object reference.
+	
+5.	Modifiers allowed for Constructor are – public,protected,private,no access
+	a.	If default constructor is private, since it is not visible to the child classes, 
+		we have to create another parameterized constructor with public or protected access.
+
+6.	Can default constructor call this()?
+	a.	No. Compile error “Recursive constructor invocation”. However, it can call parameterized this() if the corresponding parameterized constructor is defined.
+	
+7.	Can we write throws Exception after constructor definition?
+	a.	Yes
+	
+8.	Difference between Aggregation and Composition.
+	a.	Composition – Part can not exist with out whole.(IT dept is a part of college)
+	b.	Aggregation – Part can exist with out whole.(room contains table)
+	
+9.	What is Object cloning in java?
+	a.	Clone method in Object class can be called to create a completely new instance in memory with the same values of the current object. Clone
+		does shallow copy not deep copy.
+	
+10.	Can we overload main() method?
+	a.	Yes.
+	
+11.	What is final method, final variable and final class, blank final variable, static blank final variable?
+	a.	Final variable can only be assigned value once.
+		i. If Final variable is a reference object then it can be instantiated once, however setter can be called to change the values of the properties 
+		   of the object.
+		ii.	If final is an instance variable, then it has to be initialized during declaration or inside any one constructor. If it is declared during 
+			initialization then declaring it again inside constructor will give compile error.
+	b.	Final method can not be overridden.
+	c.	Final class can not be inherited.
+	d.	Blank final variable is an instance variable which is declared as final and not initialized during declaration and must be initialized inside 
+		every constructor of the class. That is Object creation of the class is not possible w.o. final instance variable initialization.
+	e.	Static blank final variable is an final instance variable which is not initialized during declaration and can only be declared inside static block.
+
+12.	Can we declare main method as final?
+	a.	Yes, public static final void main()
+
+13.	What is run time polymorphism and can we achieve run time polymorphism using instance variables?
+	a.	Dynamic method dispatch is known as Runtime Polymorphism. 
+		i.	Parent p = new Child(); p.childMethod(); //Here at compile time, p is a reference of Parent class which will check if childMethod() is present in parent class, and if not present, will give compile error. However, at run time it will call childMethod() of child class.
+		ii.	The above can not be achieved with instance variable.
+
+14.	What is static binding and dynamic binding?
+	a.	When type of object is determined at compile time, it is known as Static Binding. If there is any private, final, or static method in class , 
+		then it is static binding. (e.g. Dog d1 = new Dog(); d1.eat();)
+	b.	When the type of object is determined at run time, it is known as dynamic binding. (e.g. Animal a = new Dog(); a.eat();)
+
+15.	What is marker interface?
+	a.	An interface which has no data member and no method is known as Marker interface. E.g. Cloneable, Serializable
+
+16.	What are the modifiers permitted for Class and Interface?
+	a.	Only public, abstract, final are permitted for Class.
+	b.	Only public, abstract are permitted for interface.
+
+17.	What are the modifiers permitted for any instance variable?
+	a.	Only public, protected, private, static, volatile, transient and final are allowed for instance variable of any class.
+
+18.	What is Transient and Volatile in java?
+	a.	Transient – A variable is marked as transient, then it can not be serialized.
+	b.	Volatile – Volatile variables are not cached and are always retrieved from main memory. This is used to ensure Atomicity of data.
+
+19.	What is Static import?
+	a.	With static import we can use any static member of the class without mentioning class name.
+	b.	Import static java.lang.System.*;
+	c.	With above import statement we can directly write Out.println() instead of SysOut();
+
+20.	What is toString() method?
+	a.	It is present in Object class. So any object can be converted to String using this. In other words, this gives the String representation of any object.
+	b.	When we write Sysout(), it internally invokes toString().
+
+21.	Why is String immutable in java?
+	a.	As String values are maintained in String pool, one value is being pointed by many references. It such scenario if String value is modified, it will impact all 5 references. That is why, String is immutable in java. One more reason is thread safety.
+
+22.	How to create immutable class in java?
+	a.	Make the class as final.
+	b.	No setter should be present in the class.
+	
+23.	What is native method?
+	a.	When we want to invoke java method from any other programming language, we need to declare the java method as native.
+	b.	Native methods are never defined in java file, they are only declared in java file and defined in other language file.
+	
+24.	What is the sequence of call between static, non-static and main method?
+	a.	Static -> main -> non static (non static blocks are called after object creation, if object is not created for the class, 
+		then non static block is not called.)
+	b.	Static  block -> static method -> non static block(if object is created) -> non static method 
+	(methods are not executed by default unless explicitly called. However blocks are called by default. static block is called with class loading, 
+	non-static block is called while object creation or constructor call)
+	
+25.	What are the methods in Object class, and which ones are final among these?
+	a.	getClass() - final
+	b.	equals()
+	c.	hashCode() - 
+	d.	clone() - protected
+	e.	wait() – final  
+	f.	notify() – final
+	g.	notifyAll() - final
+	h.	toString()
+	i.	finalize() – protected
+	
+26.	What is Garbage collection?
+	a.	Garbage collection is a process by which when any object is not being referenced the memory allocated is freed by Garbage Collector.
+	b.	System.gc() is used to call garbage collection explicitly.
+	c.	Finalize() method is called just before garbage collection for system clean up.
+	
+27.	What kind of thread is Garbage collector?
+	a.	Daemon Thread.
+	
+28.	What is serialization?
+	a.	Conversion of object into byte stream.
+	
+29.	What are the modifiers allowed for local variables?
+	a.	Only final is permitted.
+	
+30. Can a local variable be used without initialization?
+	a. No.
+
+31. Can a method be declared as final and abstract at the same time?
+	a. No, only one is permissible.
+	
+32. Can abstract class have main method?
+	a. Yes. can run as well.
+	
+33. Can a method be declared as abstract and static at the same time?
+	a. No.
+	b. static and final can be used together.
+	c. abstract method can only have no access, public or protected modifiers. No other modifier is allowed for abstract methods.
+	
+34. Can static block make reference to any non static variable/method?
+	a. Yes. Static block can create the object using contructor. And call the non-static method using the object reference created.
+	   In this case, non-static block(as object is created), then called non-static method would be invoked prior to main method.
+	    Static block can make direct reference to static variables and static methods without object creation.Even static block can call main method.
+	   
+35. Difference between Iterator and ListIterator?
+	a. Set.iterator(), list.iterator() but list.listIterator()
+	b. Iterator has only hasNext() and next(), where as ListIterator has hasPrevious() and previous() as well that is Traverse in both direction.
+	c. ListIterator is an interface which extends Iterator.
+	d. ListIterator allow modification to the list while traversing, which cant be done using iterator.
+	
+36. Does reflection call default contructor for creating new instance?
+	a. Yes(Default constructor should be defined if any parameterized constructor is defined. Its fine if no constructor is defined)
+	
+37. What is Deep Cloning and Shadow clonning?
+
+38. What is difference between Serializable and Externalizable?	
+	a. Externalizable extends Serializable, with 2 extra methods readExternal and writeExternal.
+	b. In case of Externalizable, default constructor is called during deserialization, thats why default constructor is mandatory here.
+		However, in case of Serializable, during deserialization, no object state is restored from property values. No default constructor is called. 
+		
+39. Wellformed xml vs Valid xml?		
+
+40. Is main method inherited?
+	a. Yes. If a child class does not have main and parent class does have, then we can run the child class as main, in this case parent method is invoked...
+	
+41. What DriverManager.getConnection does? How Class.forName works here?
+	a. Class.forName is used to load the JdbcOdbcDriver class at runtime as we do not have direct access to some classes of rt.jar, 
+	which comes with jre that we are using. However DriverManager class has access to the registered driver, and loads the driver class at runtime.
+		
+
+42. Can method overloading be achieved through parent and child class parameters?
+	a. Yes. In this case, method with actual child class parameter will be called at runtime.
+
+43. What kind of exception is when you write cutom exception class that is a class that extends Exception?
+	a. Checked exception.
+	
+44. Why is Serial version UID required for a Serialized class?
+	a. To check whether the same object or same class is deserialized. If SerialVersionUID is not defined then during deseialization if class structure has changed then it will throw error.
+	
+45. How to access inner classes?	
+
+46. What are acceptable literals for a switch statement ? It has to be convertible int , and enum .. however java v1.8 allows Strings also.
+
+=============================================================================================
+
+Lets say I have a log file which logs the user names comma separated whenever user log in into my application..
+I maintain separate line for each days for a month. Once month is over I archive the file and create a new file.
+How to find the user who has logged in maximum number of times in a given month and in a given day ? 
+
+=============================================================================================
+
+give an example why u use transient
+
+==============================================================================================
+
+pass by ref vs pass by value ? how java behaves? is it datatype dependent
+http://javadude.com/articles/passbyvalue.htm
+http://stackoverflow.com/questions/40480/is-java-pass-by-reference-or-pass-by-value
+
+=============================================================================================
+
+Input is a combination of arbitrary complex filters. For example:
+name = "smith" AND age > 9 OR Not(city = "New York")
+It asks for a string representation, including the ability to generate and parse filters from the string representation. (you are not required to implement the string parsing logic since this could take too long)
+Hint: give an example of a tree data structure.
+
+https://www.dynatrace.com/resources/ebooks/javabook/how-garbage-collection-works/
+http://javapapers.com/java/how-java-garbage-collection-works/
+
+https://www.careercup.com/page?pid=java-interview-questions&n=2

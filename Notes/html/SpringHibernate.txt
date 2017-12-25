@@ -1,0 +1,114 @@
+
+Spring Bean Defintion Inheritence...........................
+--------------------------------------------------------------------
+<bean id="electronicdevice" class="com.deb.spring.ElectronicDevice">
+</bean>
+<bean id="television" class="com.deb.spring.Television" parent="electronicdevice">
+</bean>
+
+xml is loaded at runtime. 
+If parent is mentioned in xml and not in actual class, then it does not give any error, unless at java side any casting is done between parent child.
+If java class mention extends, and parent is not specified in spring xml, then it does not give any error, and casting is allowed between parent child.
+The main purpose of mentioning parent in xml is, to get the properties(those defined in xml) inherited from parent.
+-----------------------------------------------------------------------------
+
+Abstract Classes in Spring......................................
+-------------------------------------------------------------------------------
+<bean id="electronicdevice" class="com.deb.spring.ElectronicDevice" abstract="true">
+</bean>
+
+While object creation Spring calls constructor of the specified bean. And then, for setting properties, it calls setters, if constructor injection is not specified 
+in xml.
+1. If class is defined as abstract and not specified in xml, while object creation of the class(depending on bean scope Singleton or ProtoType), 
+Spring will throw Exception, mentioning no constructor specified for abstract class.
+2. If class is defined as abstract and also specified in xml, then while object creation of class, no Exception is thrown. However, in this case, when you try to call
+method of abstract class, Spring will throw exception mentioning "Bean definition is abstract".
+The above cases are same for interface as well.
+-------------------------------------------------------------------------------
+Hibernate exception
+http://www.dil.univ-mrs.fr/~massat/docs/hibernate-3.1/api/org/hibernate/exception/package-tree.html
+-----------------------------------------------------------------------------------------------------
+Spring Exception Handling
+http://www.mkyong.com/spring-mvc/spring-mvc-exception-handling-example/
+
+-------------------------------------------------------------------------------------------------------
+
+Spring transaction management uses Around Advice.
+
+-------------------------------------------------------------------------------------------------------
+
+Setter injection vs Constructor injection
+1. Partial injection possible in case of setter injection. Partial properties can be set. Where as in constructor injection, all properties have to set.
+2. Contructor creates object everytime called, setter doesnt
+3. Setter injection overrides contructor injection.i.e. if we specify both then IOC will use setter.
+
+-----------------------------------------------------------------------------------------------------
+
+
+///////////////////////////////////////////// .............. HIBERNATE ................ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+------------------------------------------------------------------------------
+Hbm2ddl.auto property 
+1. Validate - validate the schema and make no changes to the database
+2. Update - Update the schema(Only capable of adding not deleting)
+3. Create - drops and recreate all the schema at the application start up
+4. Create-Drop -  Drops schema at startup, then creates those and drop at the end if SessionFactory or EntityManagerFactory is closed explicitly.
+-------------------------------------------------------------------------------
+
+What does session.flush do?
+session.flush synchronizes the changes in the cache with that in the database. that is it writes the changes to the database.
+Hibernate flush changes automatically 
+> before any query execution 
+> when transaction is committed.
+commit = flush + commit; //that is flush doesnot commit
+
+commit means transaction is closed. If you have 1000 records to insert then use flush after every 30 record, so that transaction is not closed but commit happens.
+------------------------------------------------------------
+inverse attribute
+Parent p = session.load(Parent.class,parentId);
+Child c = new Child(childId);
+p.addChild(c);
+session.save(c);
+
+Here parent is aware of the relationship between parent child. (case 1)
+if c.setParent(p) would have been used in place of p.addChild(c), then child would have been aware of the relationship. (case 2)
+
+when we write inverse=false (at parent side), that means parent is reponsible for maintaining the relationship. In this case, 
+> if parent is aware of relationship(case 1), then foreign key column of child will have the value.(i.e. extra update statement will be executed)
+> if child is aware of the relationship, then foreign key column of child will have the value, but no extra update statement is executed.
+when we write inverse=true (at parent side), that means child is responsible for maintaining the relationship. In this case, 
+> if parent is aware of the relationship, then foriegn key column of child will have null value.(no extra update statement)
+> if child is aware of the relationship, then foreign key column of child will have value.(no extra update statement)
+
+----------------------------------------------------------------
+
+inverse vs cascade
+if you have mentioned cascade="save-update" in parent.hbm.xml, then with save or update operation on parent, there will be a child save/update executed.
+
+-----------------------------------------------------------------
+
+save vs saveorUpdate
+
+------------------------------------------
+
+is transaction.commit mandatory? What if we dont use it?
+
+-----------------------------
+
+load balancing software
+
+-------------------------------
+
+join fetch
+http://stackoverflow.com/questions/17431312/difference-between-join-and-join-fetch-in-hibernate
+
+----------------------------------
+
+Hibernate vs JPA
+JPA is the specification and hibernate implements it. Like Hibernate other ORM providers also implement JPA like EclipseLink
+
+JPA - http://docs.oracle.com/javaee/6/tutorial/doc/bnbpz.html
+
+JPA without hibernate
+persistence provider
+
+join vs join fetch

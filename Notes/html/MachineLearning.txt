@@ -1,0 +1,21 @@
+> David Chappel course
+1. Find patterns in data
+2. Use patterns to predict future
+Ex: Detecting Credit Card Fraud, Detecting whether a customer will switch to the competitor
+
+Data -> MachineLearningAlgo -> Model -> Application
+We supply Data with patterns to MachineLearningAlgo and it finds a model in the data, which is then fed into an Application who can use it to predict.
+MachineLearning lets us find/use a pattern in existing data and then creates a model that recognizes the pattern in new data.
+
+MachineLearning= Predictive Analytics
+
+> R is an ope source programming language and environment
+> R supports machine earning,statistical computing etc.
+> Pythin is also open source language that supports machine learning.
+
+Swift AI
+https://github.com/Swift-AI/Swift-AI
+
+tanmay bakshi
+
+

@@ -1,0 +1,135 @@
+https://docs.oracle.com/javase/tutorial/essential/concurrency/procthread.html
+https://dzone.com/articles/think-twice-using-java-8
+forjoinpool
+http://www.javaworld.com/article/2078440/enterprise-java/java-tip-when-to-use-forkjoinpool-vs-executorservice.html
+
+====================================================================================
+
+> Each process has its own memory. However Thread is a lightweight process which doesnt require its own resources. Thread exists within a process. Every process has atleast one thread(main thread). Threads share resources.
+
+> Thread.sleep() suspends the execution of a thread for a specific period. Sleep can be terminated by interrupts. Sleep method throws InterruptedException(checked exception), which is thrown when another thread tries to interrupt the sleep of current thread.
+
+> When t1 wants to interrupt t2, t1 will call t2.interrupt(); There is a flag called Thread.isInterrupted() which indicates whether a thread was interrupted. This flag is reset once this method is called.
+
+> When thread t1 wants to wait till thread t2 finishes, t1 must call t2.join(). Join also gets interrupted when interrupt is called.
+
+> When we call synchronize method on any object, then current thread acquires a lock on the object and releases lock when method execution returns OR any exception occurs on the method.
+
+> When we call synchronize static method, then current thread aquires lock on the class object associated with the class. The class level lock is idependent of lock on any object of the class.
+
+> Synchronize block must provide an object on which thread needs to acquire lock.
+
+> Reentrant Synchronization: When a thread acquires a lock on an object on which it already holds a lock, then it is called Reentrant lock. This can happen when a synchonize block/method calls another synchronize block/method.
+
+> Volatile variable always makes sure that every read that happens must be done after write is completed, so that read operation sees latest value.
+
+> Starvation: Let's say we have one object which has a synchronized method which takes long time to run. If one thread frequently executes this synchronized method, other threads who require synchronized access on the object will often be blocked. 
+
+> When we call wait method on an object, the thread goes into a suspended state and will not wake up untill some other thread notifies for an event. Its a best practice to use wait method inside a while loop, as wait method can wake up by any notification on the object which may not necessarily for the notification current thread is waiting on. Wait also throws InterruptedException similar to Sleep.
+Wait should also be used inside a synchonized block as this requires a lock on the object on which it is being invoked.
+When Wait is invoked the thread releases the lock on the object and goes into a suspended state, until another thread acquires the same lock and invokes  notify/notifyall.
+Notify wakes up any one of the thread waiting on the object. This is useful when multiple threads are performing similar operations and it doesnt make any difference which thread wakes up.
+
+> Producer - Consumer https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html
+
+> Strategy to create Immutable object:
+	> Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
+	> Make all fields final and private.
+	> Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.
+	> If the instance fields include references to mutable objects, don't allow those objects to be changed:
+	  Don't provide methods that modify the mutable objects.
+	> Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.
+	
+> Executor Interface: https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html
+	https://dzone.com/articles/the-executor-framework
+
+> Why Threadpools are require? Thread creation requires a siginificant overhead including memory allocation and deallocation when thread is created or destroyed.Also Thread require good amount of memory. To avoid this reusability of thread was introduced by using ThreadPools.
+
+> Threadpool consist of worker threads and these threads are separate from the runnable/callable tasks they execute.
+
+> One type of threadpool is FixedThreadPool, which will always have fixed number of threads to execute tasks. When a thread is terminated while it is still in use then another thread can take the task. It also maintains a queue of tasks which is helpful when number of tasks to be executed is more than number of threads.
+One important advantage of FixedThreadPool is that application using it can degrade gracefully. For example an http web server which creates a new thread to handle every incoming request, if http web server doesnt use a FixedThreadPool to create threads for every new request that arrives then it can crash immediately if there are huge number of request coming in simultaneouly, where as a FixedThreadPool would ensure that it doesnt create Threads beyond a certain limit and queues up the extra requests. By which system will not dies immediately.
+
+> Executors.newFixedThreadPool(numberOfThreads_) can be used to create FixedThreadPool.
+
+> http://www.journaldev.com/1034/java-blockingqueue-example
+
+======================================================================================
+
+http://crunchify.com/what-is-java-semaphore-and-mutex-java-concurrency-multithread-explained-with-example/
+
+>> Why you need threads, how to create threads, which one is better way to create threads e.g. by extending thread class or implementing Runnable ?
+Ans. Java programming language doesn't support multiple inheritances of class, but it allows you to implement multiple interfaces. Which means, it's better to implement Runnable than extends Thread.
+
+>>  What is the difference between start() and run() method of Thread class?
+Ans. start() method a new Thread is created and code inside run() method is executed in new Thread while if you call run() method directly no new Thread is created and code inside run() will execute on current Thread. You can not call start() method twice on thread object. once started, second call of start() will throw IllegalStateException in Java while you can call run() method twice.
+
+>> Wait vs sleep?
+Ans: http://howtodoinjava.com/core-java/multi-threading/difference-between-sleep-and-wait/
+https://www.google.co.in/search?q=wait+method+without+synchronize&ie=utf-8&oe=utf-8&client=firefox-b&gfe_rd=cr&ei=PPx7WfjgDOzH8ge39LP4DA
+
+
+>> What is the difference between Runnable and Callable in Java?
+Ans.Both Runnable and Callable represent task which is intended to be executed in a separate thread. Runnable is there from JDK 1.0 while Callable was added on JDK 1.5. Main difference between these two is that Callable's call() method can return value and throw Exception, which was not possible with Runnable's run() method. Callable return Future object, which can hold the result of computation.
+
+>> What are various ways to achieve Thread Safety ? Immutable object, Synchronization, ThreadLocal, Atomic variables
+
+>> Synchronized block with Class as parameter vs Object as parameter ?
+Ans: https://stackoverflow.com/questions/3718148/java-class-level-lock-vs-object-level-lock
+
+>> What is volatile variable in Java? When do you use? e.g. Singleton class
+http://javarevisited.blogspot.in/2011/06/volatile-keyword-java-example-tutorial.html
+http://javarevisited.blogspot.in/2014/05/double-checked-locking-on-singleton-in-java.html
+
+>> How do you share data between two thread in Java? (Inter-thread communication)
+Ans. You can share data between threads by using shared object, or concurrent data structure like BlockingQueue. Ask to write a code for Producer consumer problem using datastructure. http://javarevisited.blogspot.in/2013/12/inter-thread-communication-in-java-wait-notify-example.html
+http://javarevisited.blogspot.in/2012/02/producer-consumer-design-pattern-with.html
+
+>> Why wait, notify and notifyAll are not inside thread class?
+Ans. wait, notify and notifyAll operate at lock level, it make sense to defined it on object class because lock belongs to object
+
+>> What is ThreadLocal variable in Java? Any usecase when you should use ThreadLocal variable vs Class level variable?
+
+>> How do you stop a thread?
+Ans. There was some control methods in JDK 1.0 e.g. stop(), suspend() and resume() which was deprecated in later releases due to potential deadlock threats, from then Java API designers has not made any effort to provide a consistent, thread-safe and elegant way to stop threads. Programmers mainly rely on the fact that thread stops automatically as soon as they finish execution of run() or call() method. To manually stop, programmers either take advantage of volatile boolean variable and check in every iteration if run method has loops or interrupt threads to abruptly cancel tasks.
+
+>> What is the difference between Stack and Heap in Java?
+Ans. Each thread has their own stack, which is used to store local variables, method parameters and call stack.Variable stored in one Thread's stack is not visible to other. On another hand, the heap is a common memory area which is shared by all threads. Objects whether local or at any level is created inside heap.
+
+
+>>  What is thread pool? Why should you thread pool in Java? What are APIs provided by Java?
+Ans. Java API provides Executor framework, which allows you to create different types of thread pools e.g. single thread pool, which process one task at a time, fixed thread pool (a pool of fixed number of threads) or cached thread pool (an expandable thread pool suitable for applications with many short lived tasks).
+
+>> What are Concurrency issues ? Have you faced any challenges during development of concurrent java appication?
+
+>> What are the concurrency utilities provided in java?
+
+>> Have you come across deadlock issue in your application? How did you solve it?
+
+>>How do you check if a Thread holds a lock or not?
+Ans. There is a method called holdsLock() on java.lang.Thread, it returns true if and only if the current thread holds the monitor lock on the specified object.
+
+>> How do you take thread dump in Java?
+Ans. When you take thread dump, JVM dumps state of all threads in log files or standard error console. In windows you can use Ctrl + Break key combination to take thread dump, on Linux you can use kill -3 command for same. You can also use a tool called jstack for taking thread dump, it operate on process id, which can be found using another tool called jps.
+
+>> What is the difference between synchronized and ReentrantLock in Java? Any Disadvantages of ReentrantLock in Java ?
+http://javarevisited.blogspot.in/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
+
+>> There are three threads T1, T2, and T3? How do you ensure sequence T1, T2, T3 in Java?
+Ans. Use Join method.
+
+>> What does yield method of Thread class do?
+Ans. Yield method is one way to request current thread to relinquish CPU so that other thread can get a chance to execute. Yield is a static method and only guarantees that current thread will relinquish the CPU but doesn't say anything about which other thread will get CPU. Its possible for the same thread to get CPU back and start its execution again.
+
+>> What is the concurrency level of ConcurrentHashMap in Java?
+Ans. ConcurrentHashMap achieves it's scalability and thread-safety by partitioning actual map into a number of sections. This partitioning is achieved using concurrency level. Its optional parameter of ConcurrentHashMap constructor and it's default value is 16. The table is internally partitioned to try to permit the indicated number of concurrent updates without contention.
+http://javarevisited.blogspot.in/2013/02/concurrenthashmap-in-java-example-tutorial-working.html
+
+
+>> How to create an Immutable object in Java?
+http://javarevisited.blogspot.in/2013/03/how-to-create-immutable-class-object-java-example-tutorial.html
+
+>> What happens if a thread throws an Exception inside synchronized block ? Will it release lock? Yes
+
+
+==========================================================================

@@ -1,0 +1,21 @@
+> Open ended vs Close ended mutual fund
+
+
+> Limit Order vs Mkt Order vs Stop Order
+	>  If you want to buy stock ABC, which is trading at $12, you can set a limit order for $10. This guarantees that you will pay no more than $10 to buy this stock. Once the stock reaches $10 or less, you will automatically buy a predetermined amount of shares. On the other hand, if you own stock ABC and it is trading at $12, you could place a limit order to sell it at $15. This guarantees that the stock will be sold at $15 or more.
+	> Assume that you bought stock XYZ at $10 per share and now the stock is trading at $20 per share. Placing a stop order at $15 will guarantee profits of approximately $5 per share
+	http://www.investopedia.com/ask/answers/04/022704.asp
+
+
+
+	
+
+
+
+
+
+
+
+
+
+

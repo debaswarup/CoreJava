@@ -1,0 +1,833 @@
+https://stackoverflow.com/questions/20243422/how-memory-gets-allocated-and-what-gets-stored-where-java-inheritance
+https://stackoverflow.com/questions/17877615/how-many-objects-are-created-due-to-inheritance-in-java
+
+----------------------------------------------------------------------------------------
+ArrayList vs LinkedList...
+ArrayList-
+Maintains Array of element internally.
+Use System class feature ArrayCopy or ArrayShifting for inserting element.
+Search is fastre since index is maintained.
+Resizing in arraylist happens by copying the elements of arraylist to a new list. the same happens when we insert at a specific position also.
+what does list.add returns.
+LinkedList-
+Maintains nodes...with pointer to both prev and next node.
+Insertion at first position or deletion from any position is faster.
+
+ArrayList - Random Access
+SequentialList or LinkedList - Sequential Access
+
+-----------------------------------------------------------------------------------------
+
+Abstract class - 
+Ø If at 1 or n number of methods are abstract then class has to be declared as abstract. Class has to be declared as abstract if at least one method is abstract. 
+However, if a class is abstract then it is not mandatory that at least one method should be abstract.
+Ø Abstract class is never instantiated. However it can have constructor. Abstract class constructor is called while instatiation of child class through super().
+Ø Instance variable of abstract class can never be abstract. 
+  (Abstract modifier is not permitted for instance variable, only public, protected, private, volatile, transient, final, static are permitted.)
+Ø Abstract class can not have final modifer.
+  
+  NOTE: abstract method can not have following modifiers.
+		1.final
+		2.static
+		3.private
+  
+Interface - 
+Ø By default all methods are public, abstract. Only public and abstract modifiers are allowed for methods in interface, no other method is allowed. 
+If any other modifier is mentioned, it will give compile error.
+Ø By default all instance variable of Interface are public, static and final. No other modifier is allowed for instance variable in Interface.
+Ø Since every instance variable is final, and there is no constructor, all instance variable has to be initialized during declaration.
+(Otherwise they become blank final variable)
+Ø Interface can not have constructor.
+Ø Can extend 0..* Interfaces.
+Ø Can not extend any class.
+Ø Can not implement Interface.
+
+
+http://www.dummies.com/how-to/content/the-life-cycle-of-a-java-object.html
+http://stackoverflow.com/questions/18096888/object-life-cycle-in-java-and-memory-management
+  
+NOTE: Interface in java provides Multiple Inheritence feature.  
+-------------------------------------------------------------------------------------------
+
+Set
+ |__HashSet
+ |__LinkedHashSet
+ |__TreeSet
+ 
+Set - 
+Ø A collection that contains no duplicate elements. 
+Ø Sets contain no pair of elements e1 and e2 such that e1.equals(e2), and at most one null element.
+Ref - <http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Set.html> 
+HashSet- Hashtable bucket concept….non synchronized……… n time space for basic operation
+LinkedHashSet - HashTable and LinkedList implementation of Set interface…Preserves the natural order in which elements are added.
+TreeSet - Tree structure implementation of Set interface……..  By default ASC sorted order….. Log(n) time cost for basic operations….
+
+HashTable - 
+Ø Key- Value
+Ø Non null key
+Ø HashCode and Equals method
+Ø Performance - initial capacity and load factor
+Ø Hash Collision - Single bucket stores multiple keys
+Ø reHash method - when no of elements exceed loadFactor * initialCapacity
+Ø Load factor inversely propertional to space where as directly propertional to time
+Ø Synchronized - throws concurrent modificationException
+
+Map
+ |__HashMap(One Null key many null values.....Not synchronized)
+ |__TreeMap(Sorted order ASC bydefault...Log(n) time...Tree implementation...Not synchronized...)
+ |__HashTable 
+ |__LinkedHashMap(natural order preserved...linked list implementation)
+ |__WeakHashMap(Same as HashTable, however the unused keys are garbage collected i.e. the entry for the weak keys are removed from Map)
+ 
+To synchronize HashMap
+Map m = Collections.synchronizedMap(new HashMap(….))
+
+LinkedHashMap: LinkedHashMap extends HashMap. Internally LinkedHashMap maintains a doubly linklist. Meaning every node will have a pointer to the node inserted before it and another pointer to node inserted after it. These pointers are on top of next pointer (within a bucket) that we have in HashMap.
+LinkedHashMap maintains a head node (node which was inserted first) and a tail node (node which was inserted last).
+C:\Users\sushrita\Google Drive\misc\html-1\html\LinkedHashMap.jpg
+The insertion order is not impacted by whether a key is re-inserted into the map. Whenever we call put method, it invokes containsKey() first and if key is already there then replaces the value.
+http://javahungry.blogspot.com/2015/08/how-linkedhashmap-works-internally-in-java.html
+LinkedHashMap takes more memory than HashMap. LinkedHashMap add little more overhead to time than HashMap in terms of get/put operation.
+HashMap's Search, Insert, Delete operation have best/average case time complexity O(1) and worst case O(n).
+http://javabypatel.blogspot.in/2015/10/time-complexity-of-hashmap-get-and-put-operation.html
+LinkedHashMap can be used in LRU(Least Recently Used) cache. We can specify a size while creating LinkedHashMap and while inserting, it will make sure not to exceed the size. Ex: If size is 10 and already 10 elements are present then while inserting 11th element, it will delete one element to maintain size of 10. The eviction of the element is based on the order you would have specified during creation of the LinkedHashMap. If the order specified as Access Order then the element which was least accessed will be removed and if the order specified as Insertion Order then first element which was inserted will be removed.
+https://stackoverflow.com/questions/23772102/lru-cache-in-java-with-generics-and-o1-operations?noredirect=1&lq=1
+https://stackoverflow.com/questions/27475797/use-linkedhashmap-to-implement-lru-cache
+Shopping Cart is a real life example, where we see cart number against Item we have chosen in order we selected the item. So map could be LinkedHashMap<Cart Number Vs Item Chosen>.
+LinkedHashMap maintains a doubly link list because it helps in faster deletion. For example a->b->c and we want to delete b then make a.next = c and c.prev=a; If it wud have been a singly link list we wud have had to traverse the list to delete.
+
+
+--------------------------------------------------------------------------------------
+Equals Hash code
+http://www.technofundo.com/tech/java/equalhash.html
+
+If a.equals(b) then a.hashcode=b.hashcode
+But if reverse is not necessary true
+-----------------------------------------------------------------------------------------
+Java Assertion
+
+assert 3>4 : "3 is not greater than 4";
+Will throw assertion error with error message…
+
+Run as --- java -ea MyAssertionTest.java
+------------------------------------------------------------------------------------------
+
+Sub packages(package inside package) are not possible in java
+
+----------------------------------------------------------------------------------------
+
+Java DataType-
+http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+
+---------------------------------------------------------------------------------------
+
+1. Only private,public and protected are allowed for constructors
+2. If a method has void return type, and a return statement is written at  the end, then it will give compile error.
+
+---------------------------------------------------------------------------------------------
+
+Java Memory areas
+http://www.javatpoint.com/internal-details-of-jvm#jvminternalheaparea
+
+------------------------------------------------------------------------------------------------
+
+===================================================================================================
+String vs StringBuilder vs StringBuffer:
+String is immutable.
+StringBuffer and StringBuilder both are mutable. But every method in StringBuffer is synchronized. Hence StringBuffer is thread safe.
+Example of append method in StringBuffer:
+	public synchronized StringBuffer append(String str)
+
+However StringBuilder is faster then StringBuffer.
+
+StringBuffer provides following useful methods (all methods are synchronized):
+1. append
+2. delete
+3. replace
+4. insert
+5. reverse
+6. toString
+=================================================================================================
+
+Constructor - 
+1. By default every child class constructor calls super() as the first statement if this() is not explicitly mentioned as the first statement.
+2. Super() or this() should always be the first statement if any one of them is explicitly mentioned in the constructor.
+3. Super() always calls the default constructor of the parent class.
+4. We can call parameterized constructor of the parent class by passing arguments to super(). Similary, we can call parameterized constructor of the same class 
+   by passing arguments to this().
+5. Calling super() is impacted by access modifiers in parent class(private,public,protected,no access).
+   i.e. if constructor is private in parent, then child class can not call super().
+   (And since every child class constructor by default calls super as their first statement, unless explicitly super or this is mentioned, 
+   we have to create another parameterized constructor with public or protected access.)
+6. Constructor can call both static and non static method of the class directly w.o. any object reference.
+7. If parent class constructor throws Exception and child class constructor does not, then it will give compile error, as by default child class constructor 
+   implicitly calls parent constructor as the first statement. (It can be avoided using this instead of super as the first statement)…… 
+   However, if child class constructor throws Exception and Super class constructor does not then it will not give any error.
+8. If no constructor is defined, then we can call default constructor. However, if any parameterized contsructor is defined, then we can not call default.
+
+------------------------------------------------------------------------------------------------------
+
+Method Overriding –
+1.	Should have same signature.
+2.	Static method cant override instance method and instance method cant override static method. If parent and child method, having same signature,
+	don’t agree on static or non static modifiers, then it will give compile error.
+	a.	Base b = new Child(); b.overriddenMethod(); //It will call base class method if it is static and child class method if it is non static.
+3.	For access specifier, consider visibility first. 
+	?	Private is visible to same class only.
+	?	No access is visible to same package only.
+	?	Protected is visible to child classes only. Child class can be inside or outside same package.
+	?	Public is visible everywhere.
+	Following cases are possible with access specifiers-
+	a.	If Super class method is Private, then it is not visible to Sub class.
+	b.	If Super class method is No access, then sub class method can be no access, protected or public.
+	c.	If Super class method is protected, then sub class method can be protected or public.
+	d.	If super class method is public, then sub class method can be public.
+4.	If Super class method throws Exception, then 
+	a.	Child class method may throws Exception (if it throws then it has to be Exception or any child class of Exception which can be thrown).
+	b.	Child class method may not throw Exception.
+5.	If Super method does not throw and child method throws, then it will give compile error. 
+	However if child method throws RuntimeException or any subclass of that, then it wont give any error.
+	
+	e.g. Child ch = new Base(); ch.display(); //display is present in both Base and Child and has same signature .... // Will give compile error
+		Child ch = (Child)new Base(); ch.display(); //Will not give compile error, however will give runtime exception
+6. When a parent class method accept a parameter, and child class method with same name accept child parameter, then it is overloading not overriding.
+	As child class will have 2 different methods, one inherited from parent(which accepts super class parameter), 
+	and other its own(which accept child class parameter).
+	
+	Case1 : class Super{ void display(Integer i){} }
+	class Child{ void display(Object o){} }
+	Super s = new Child(); s.display(3); //Super class method will be called
+	
+	Case2 : class Super{ void display(Object o){} }
+	class Child{ void display(Integer i){} }
+	Super s = new Child(); s.display(3); //Super class method will be called
+	
+	NOTE: As it is overloading and Overloading happens at static/compile time, it will always call Super class methods. And if Super class method doesnot
+	contain the required method signature, then will give compile time error.
+7. If parent and child class have same method signature, and the only difference is with return type, 
+	case1: returntype of child method is incompatible(that is can not be automatically casted to parent return type) then compile error at child method.
+	case2: if return type is compatible that is child return type can be automatically casted to parent return type, then overriding happens.
+NOTE: Method Signature complies of method name and parameters. Return type is not considered in signature, for both overloading and overriding.
+8. In case of Overloading, if method signature is same and return type differs(even if they can be automaticlly casted that is they are of the same hierarchy), 
+	then compile error.
+	
+--------------------------------------------------------------------------------------------------------------
+
+Type Casting.............
+DataType	Size	Value			Signed/Unsigned		Range			DefaultValue
+Byte________8bit____integer_________signed______________-128 to 127_____0
+Short_______16bit___integer_________signed______________-216 to 216-1___0
+Int_________32bit___integer_________signed______________-232 to 232-1___0
+Long________64bit___integer_________signed______________-264 to 264-1___0L
+Float_______32bit___FloatingPoint___unsigned____________             ___0.0f
+Double______64bit___FloatingPoint___unsigned____________             ___0.0d
+Boolean_________________________________________________true/false______false
+Char________16bit_______________________________________________________‘\u0000’
+String__________________________________________________________________null
+
+http://docs.oracle.com/javase/specs/jls/se7/html/jls-5.html
+
+Narrowing Primitive Conversion...
+double > float > long > int > short > char > byte           
+ or    
+double > float > long > int > char > short > byte
+
+A narrowing primitive conversion may lose information about the overall magnitude of a numeric value and may also lose precision and range. 
+
+
+Widening Primitive Conversion –
+byte < short < int < long < float < double
+or 
+short < int < long < float < double
+or 
+char < int < long < float < double
+
+Note :- byte to char is both Widening and Narrowing Primitive Conversion. Since byte is first converted to int(widening) and then int is converted to char(narrowing).
+
+Widening Reference Conversion –
+Subtype to Supertype
+
+Narrowing Reference Conversion –
+
+Boxing Conversion -
+	
+Few Examples - 
+
+1.	We can only assign any integer literals or character literals to an int variable.
+	int i = 1233243222; //integer literal
+	int i = 'e'; //character literal
+	whereas following will give error
+	int i = 12332432L; //Long literal
+	int i = 12332432F; //Floating point literal
+	int i = 123D; //Double literal
+	int i = 123.34; //Double literal
+
+	By default all floating point literals are Double literals unless explicitly F is specified at the end.
+
+	In case of dynamic assignment to an integer variable, literal value can exceed integer limit, in which case, 
+	it would be rounded cyclically to give negative value.
+	int i = 234324324;
+	int i1 = (i * 10000); // o/p is -1808903616
+
+2.	Following widening conversions are possible.
+	long l3 = 'k'; //char literal to long
+	double d1 = 'h'; //char literal to double
+	float f1 = 'r'; //char literal to float
+
+--------------------------------------------------------------------------------------------------------------
+
+Flow Control
+
+1.	Following will give error.
+		int a;
+		switch(a) //Using uninitialized variable
+		{
+		}
+2.	Switch block can contain case statements, or only one default statement, or it can be an empty block as well.
+3.	Following datatypes are allowed in switch statement.
+	a.	Int
+	b.	Any datatype which can be automatically casted to int.(char, short, byte)	
+
+-------------------------------------------------------------------------------------------------------------------
+
+......................................................... /////////////THREADING START\\\\\\\\\\\\\\\\ ............................................................
+
+http://docs.oracle.com/javase/tutorial/essential/concurrency/newlocks.html
+
+1. Synchronized method
+2. Synchronized block
+3. Guarded block
+4. Immutable objects
+ ---------------------------------------------
+High level concurrency
+
+1. Java.Util.concurrent package
+2. Lock object
+3. Executor Interface
+4. ExecutorService  and  ScheduledExecutorService (Callable, Future)
+5. ThreadPools
+6. Concurrent collections
+7. Atomic variable
+ ----------------------------------------------
+ 
+ Difference betn HashTable, Map.Synchronized, ConcurrentHashMap
+HashTable - old implentan…non null key value
+Map.Synchronize - Synchronize both read & write operation(i.e. blocks the operation)… Problem while iteration
+Concurrent HashMap - Synchronize write but multiple parallel read(Parallel Iteration allowed)….doesnt allow null keys and null values
+http://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
+ -------------------------------------------------
+ThreadLocal
+ ----------------------------------
+ Daemon Threads are background threads. JVM terminates itself once all non-daemon threads are terminated. However JVM doesnt depends on any daemon thread.
+ setDaemon() - Used to set a thread as daemon. isDaemon() - Used to check if thread is daemon.
+ All newly created threads, from non-daemon threads, are non-daemon by default and those can be marked explicitly as daemon using setDaemon().
+ However all threads created from daemon threads are daemon in nature by default.
+ setDaemon() must be called before start() method of thread is called. 
+ e.g. any polar thread used for polling on another server, Garbage collector, Any clock app etc.
+  --------------------------------------------------
+  CopyOnWriteArrayList
+  CopyOnWriteArraySet
+  -------------------------------------------------
+  Difference between Vector and ArrayList
+  a.Vector is synchronized, Arraylist is not.
+  b.Vector doubles its size when element increases the capacity, where as ArrayList increases half of its size.
+  -------------------------------------------------
+
+  types of lock
+  
+......................................................... THREADING END ............................................................
+
+-----------------------------------------------------------------------------------------------------
+
+Object Reachability-
+
+    1. An object is strongly reachable if it can be reached by some thread without traversing any reference objects. 
+	   A newly-created object is strongly reachable by the thread that created it.
+    2. An object is softly reachable if it is not strongly reachable but can be reached by traversing a soft reference.
+    3. An object is weakly reachable if it is neither strongly nor softly reachable but can be reached by traversing a weak reference. 
+	   When the weak references to a weakly-reachable object are cleared, the object becomes eligible for finalization.
+    4. An object is phantom reachable if it is neither strongly, softly, nor weakly reachable, it has been finalized, and some phantom reference refers to it.
+    5. Finally, an object is unreachable, and therefore eligible for reclamation, when it is not reachable in any of the above ways. 
+
+Weak Reference vs soft reference vs phantom reference
+-----------------------------------------------------------------------------------------------------
+
+Difference between RPC and RMI
+
+RPC involves remote function call.(Example javascript function calls server function using JSON or xml and callback functionality)
+RMI involves remote method call using remote object or proxy object.(java.rmi package provides this facility)
+
+----------------------------------------------------------------------------------------------
+
+https://stackoverflow.com/questions/912334/differences-between-exception-and-error
+
+An Error is a subclass of Throwable that indicates serious problems that a reasonable application should not try to catch.
+AssertionError - Thrown to indicate that an assertion has failed.
+OutOfMemoryError 
+
+Exception Handling-
+1. try block must be followed by either a catch or finally block. finally block is not mandatory, however if it is present and if try is executed, then it will
+   be executed in any case except any system failure.
+   
+static int exceptionTest()
+	{
+		try
+		{
+			int d = 1/0;
+			System.out.println("inside try");
+			return 1;
+		}
+		catch(Exception e)
+		{
+			System.out.println("inside catch");
+			int f = 2/0;
+			return 2;
+		}
+		finally
+		{
+			System.out.println("inside finally");
+			return 3;
+		}
+	}
+	
+	o/p ->  inside catch
+			inside finally
+			return 3
+			
+			
+Exception
+|__________________CloneNotSupportedException
+|__________________InterruptedException
+|__________________IOException
+|__________________JAXBException(javax.xml.bind.JAXBException)
+|							|____________MarshalException
+|							|____________UnMarshalException
+|							
+|__________________ReflectiveOperationException(since 1.7)
+|							|___________ClassNotFoundException
+|							|___________NoSuchMethodException
+|
+|__________________RuntimeException
+							|___________ArithmaticException
+							|___________ClassCastException
+							|___________ConcurrentModificationException
+							|___________IllegalArgumentException
+							|					|______________________NumberFormatException
+							|___________IllegalMonitorStateException
+							|___________IndexOutOfBoundsException
+												|______________________ArrayIndexOutOfBoundsException
+												|______________________StringIndexOutOfBoundsException
+							|___________NullPointerException
+
+NOTE: RuntimeException and its all sub classes are Unchecked exceptions. Exception class and all its child classes(Except RuntimeExceptions) in java are checked.							
+
+IllegaArgumentException - if u r writing a method and u dont want to accept empty string u can throw this exception.
+
+CloneNotSupported - When a class does not implement Cloneable and clone method is called.
+InterruptedException - When a thread is interrupted while sleeping or waiting. (Thread.interrupted, Thread.currentThread.interrupt). Example below :
+
+public class Test
+{
+    public static void main (String[] args)
+    {
+        final Thread mainThread = Thread.currentThread();
+
+        Thread interruptingThread = new Thread(new Runnable() {
+            @Override public void run() {
+                // Let the main thread start to sleep
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                mainThread.interrupt();
+            }
+        });
+
+        interruptingThread.start();
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            System.out.println("I was interrupted!");
+        }
+    }
+}
+
+
+ArithmaticException - Divide by zero
+
+ClassCastException - 
+	 Object x = new Integer(0);
+     System.out.println((String)x);
+	 
+ConcurrentModificationException - Modifying a Collection while Iterating over it. Such iterator are known as fail-fast iterator.
+
+NumberFormatException - Integer.parseInt("sss");	
+
+IllegalMonitorStateException -  When a thread attempts to wait on an objects monitor or notify other threads waiting on an objects monitor
+								w.o. owning the specified monitor.
+								
+StringIndexOutOfBoundException - charAt(i) method when i>=length of the String
+							
+			
+-----------------------------------------------------------------------------------------------			
+
+********************************** SERIALIZATION EXAMPLE START *********************************
+
+class Employee implements Serializable
+{
+}
+
+void serializeEmployee(Employee emp)
+{
+	FileOutputStream fout = new FileOutputStream("employee.ser"); //.ser is standard java convention
+	ObjectOutputStream objOut = new ObjectOutputStream(fout);
+	objOut.writeObject(e);
+	objOut.close();
+	fout.close();
+}
+
+void deserializeEmployee()
+{
+	Employee e = null;
+	FileInputStream fin = new FileInputStream("employee.ser");
+	ObjectInputStream objIn = new objectinputStream(fin);
+	e = (Employee)objIn.readObject();
+	fin.close();
+	objIn.close();
+}
+
+NOTE: Any transient property in Employee will not be serialized. So will give default value of the property after deserialization.
+
+Custom Serialization ....
+It is done by defining(we're not overriding here) following 2 methods in your class which is to be serialized. JVM checks for these 2 methods before serializing/deserializing.
+If found executes these before serialization/deserialization.
+class Employee implements Serializable 
+{
+	private void writeObject(ObjectOutputStream out) throws IOException
+	{
+		Sysout("Writing Object");
+	}
+	
+	private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException
+	{
+		Sysout("reading object");
+	}
+}
+
+********************************** SERIALIZATION EXAMPLE END *********************************
+
+******************************** SERIALIZATION EXAMPLE2 START **********************************
+
+1. Deserialization doesnt call constructor.
+
+public class Serialization1 implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+	
+	public int i = 10;
+	
+	public Serialization1()
+	{
+		System.out.println("const called");
+	}
+}
+
+public class SerializationTest {
+
+	public static void main(String[] args) {
+		Serialization1 st = new Serialization1();
+		st.i = 17;
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream(new File("SerializationSample.txt"));
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(st);
+			System.out.println(st);
+			oos.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		 catch (IOException e) {
+			e.printStackTrace();
+		}		
+	}	
+}
+
+public class DeseriazationTest {
+
+	public static void main(String[] args) {
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(new File("SerializationSample.txt"));
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Serialization1 st = (Serialization1)ois.readObject();
+			System.out.println(st.i);
+			ois.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		 catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}
+
+******************************** SERIALIZATION EXAMPLE2 END **********************************
+
+********************************* Clone implementation start ************************************
+
+public class CloneTest 
+{
+	public static void main(String[] args) 
+	{
+		Root r1 = new Root(6);
+		try {
+			Root r2= (Root)r1.clone();
+			r1.i = 5;
+			System.out.println(r2.i);
+		} catch (CloneNotSupportedException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}
+
+class Root implements Cloneable
+{
+	public int i = 3;
+	
+	public Root(int i1)
+	{
+		i = i1;
+		System.out.println("contructor1 called");
+	}
+	
+	
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+}
+
+THUMB RULE:
+1. Clone doesnt call constructor.
+2. If Root doesnt implement Cloneable (but override clone method), then calling r1.clone() would throw CloneNotSupportedException.
+
+
+********************************** Clone Implementation ends ***************************************
+
+******************************** Reflection Example starts *****************************************************
+
+1. If a method is private then Reflection can not invoke and throws following exception.
+	Exception in thread "main" java.lang.IllegalAccessException: Class ReflectionTest can not access a member of class Reflect1 with modifiers "private"
+	
+	However we can use following to call private methods:
+	method.setAccessible(true);
+
+
+public class ReflectionTest {
+	
+	public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, ClassNotFoundException, InstantiationException, IllegalAccessException 
+	{
+			Class class1 = Class.forName("Reflect1");
+			Reflect1 inst = (Reflect1)class1.newInstance();
+			System.out.println(inst.i);
+			
+			Object inst2 = (Reflect1)class1.newInstance();
+			Method[] methods = class1.getDeclaredMethods();			
+			for(Method method : methods)
+			{
+				if(method.getName().equals("reflectedMethod"))
+				{
+					method.invoke(inst2);
+				}
+			}
+			
+			class1.getMethod("reflectedMethod1", null).invoke(inst2);
+	}
+}
+
+class Reflect1
+{
+	int i = 9;
+	
+	public Reflect1()
+	{
+		System.out.println("const called");
+	}
+	
+	public void reflectedMethod()
+	{
+		System.out.println("reflectedMethod called");
+	}
+	
+	public void reflectedMethod1()
+	{
+		System.out.println("reflectedMethod1 called");
+	}
+}
+
+***************************************** Reflection Example ends *****************************************
+
+************************* Break Singleton Pattern start *******************************************
+
+http://www.javaworld.com/article/2073352/core-java/simply-singleton.html?page=2
+http://www.oracle.com/technetwork/articles/java/singleton-1577166.html
+https://www.securecoding.cert.org/confluence/display/java/MSC07-J.+Prevent+multiple+instantiations+of+singleton+objects
+http://blog.yohanliyanage.com/2009/09/breaking-the-singleton/
+http://stackoverflow.com/questions/15322093/breaking-of-sinlgleton-by-two-different-class-loaders
+
+************************** Break Singleton pattern ends ******************************************
+ 
+ ********************************** GWT START *******************************
+ 
+ html -> nocache.js(bootstrap javascript file) -> *.gwt.xml -> entryPoint class() -> onModuleLoad method -> RootPanel
+ 
+ button.addClickHandler -> new clickhandler -> AsyncCallback -> presenter -> GWTServlet
+ 
+ 1. How to create custom widget? 
+	a. Create a class that extends Composite.
+	
+2. Why Celltable is more used in place of FlexTable or Grid?
+	a. Pagination, Column sorting and Column width
+
+3. What is AsyncDataProvider?
+	a. Used for dynamically changing the data in celltable.
+	
+4. What is GWT ClientBundle?
+	a. Bundles images to a single image at compile time.
+	
+5. Server side communication?
+	a. GWT RPC
+	b. RequestBuilder (<inherits name="com.google.gwt.http.HTTP"/>)
+
+6. Difference between MVP and MVC?
+	a. Presenter is not purely server side code. It can be shared. However, controller is purely server side code.
+	b. UI testing can be done.
+	
+7. What is GWT deferred binding?
+	a. GWT.create(Test.class); Similar to reflection.
+	
+8. What is UIBinder in GWT?	
+ 
+ ********************************** GWT END *******************************
+ 
+ *********************************** WEBSERVICE START ************************************
+ 
+ http://axis.apache.org/axis/java/user-guide.html#Publishing_Web_Services_with_Axis
+ 
+ *********************************** WEBSERVICE END ************************************
+ 
+ ************************* ENUM ******************************
+ Enum can behave as class.
+ They can have methods(methods can have all modifiers like class), and properties.
+ Properties are final only.They can not be modified.
+ enum can implements any Interface. However can not extend any class. 
+ enum can be serialized/deserailized.
+ enum can have constructors.But all are private by default and no other modifier is permitted.
+ 
+ -----------------------------------------------------------------
+ DESIGN PATTERNS:
+ 
+ When a class has few required properties and many optional properties, following can be used.
+ 1. Telescoping Constructor Pattern : 
+		Provide one constructor with required parameters, one with 1 optional parameter, one with 2 optional parameter, so on...
+ 2. Java Beans Pattern : 
+		Provide setter for each property. Class can not be immutable here.
+ 3. Builder Pattern : 
+		One Outer class with both required and optional properties as private and final. 
+		One static inner class called Builder with same required properties as private final and optional properties as private only. 
+		Inner class will have constructor with required properties. 
+		Inner class will have methods, each of which will set one optional parameter and return current Builder object, 
+		which will have the respective optional property set.
+		Inner class will have one build method, which will create a Outer class object from the properties of the inner object and returns the same.
+		Outer outer = new Outer.Builder(required props..).individualOptionalSetterMethods().build();
+		
+-----------------------------------------------------------------
+
+Java Oject life cycle:
+1. Before an object can be created from a class, the class must be loaded. To do that, the Java runtime locates the class on disk (in a .class file) and reads it into memory. Then Java looks for any static initializers that initialize static fields — fields that don't belong to any particular instance of the class, but rather belong to the class itself and are shared by all objects created from the class.
+A class is loaded the first time you create an object from the class or the first time you access a static field or method of the class. For example, when you run the main method of a class, the class is initialized because the main method is static.		
+2. An object is created from a class when you use the new keyword. To initialize the class, Java allocates memory for the object and sets up a reference to the object so the Java runtime can keep track of it.
+
+
+ In PermGen space, there are normally only ClassLoaders and Class objects. Once a class is used the first time, it should be loaded in PermGen and not increase the PermGen anymore. The garbage collector algorithms are implementation specific, and AFAIK, there is no generic API to adress them. All you can do is do a heap dump, and if you suspect a leak, compare successive heapdumps. If you suspect a leak in PermGen, look in the heap dump for nr. of loaded classes, and see what's happening there.
+ 
+ The PermGen space mostly contains reflection data. Objects that are created at runtime are normally stored on the heap, so creating them should not increase the size of the PermGen space.
+ The size of PermGen is increased also if execute the same methods many times, although during the first execution the allocated memory is more
+ 
+ http://www.oracle.com/technetwork/java/javase/gc-tuning-6-140523.html
+ http://www.drdobbs.com/jvm/optimized-java/188700760?pgno=5
+ http://stackoverflow.com/questions/318942/what-does-permgen-actually-stand-for/320469#320469
+ 
+https://docs.oracle.com/javase/tutorial/java/annotations/
+
+
+http://www.mkyong.com/java/try-with-resources-example-in-jdk-7/
+
+Fisheye
+
+=============================================================================================
+
+https://dzone.com/articles/string-interning-what-why-and
+
+===============================================================================================
+
+Profiling tool: VisualVm
+https://dzone.com/articles/best-kept-secret-jdk-visualvm
+
+What is ThreadDump?
+ThredDump tells us what a thread is doing at a particular time. Can be taken using VisualVm.
+
+=================================================================================================
+
+http://www.journaldev.com/2366/core-java-interview-questions-and-answers#classloader-types
+
+======================================================================================
+
+Comparator vs Comparable:
+
+difference between comparable and comparator
+what type of sorting do they use
+
+Comparable provides single sorting sequence. In other words, we can sort the collection on the basis of single element such as id or name or price etc.
+Comparator provides multiple sorting sequence. In other words, we can sort the collection on the basis of multiple elements such as id, name and price etc.
+
+what type of sorting colections.sort uses?
+
+Collections class has 2 overloaded methods to sort any collection. 
+One method takes List (to be sorted) and a Comparator as input whereas other takes Comparable as input.
+Both the methods call list.sort() methood.
+List is an interface which contains a default method called sort() which accepts a comparator as input.
+If no comparator passed as input then list.sort() will sort on the basis of comparable list's overridden compareTo() method. 
+Collections.sort called with comparator as input will pass the same comparator to list.sort().
+COllections.sort() called with no comparable will call list.sort() with null Comparator as parameter.
+Collections.sort() used merge sort before java7 but now it uses Tim sort internally.
+
+======================================================================================
+
+Java 8 introduced concept of default method where interface can contain method definition through default methods.
+
+===================================================================================
+
+Java 8 introduced cocept of Functional interface:
+https://dzone.com/articles/introduction-functional-1
+
+================================================================================
+
+http://www.geeksforgeeks.org/stack-class-in-java/
+
+========================================================================
+
+http://www.geeksforgeeks.org/reverse-a-string-in-java-5-different-ways/
+
+================================================================
+
+https://stackoverflow.com/questions/21641551/what-is-the-difference-between-fileinputstream-and-bufferedinputstream-in-java
+https://stackoverflow.com/questions/18600331/why-is-using-bufferedinputstream-to-read-a-file-byte-by-byte-faster-than-using-f?noredirect=1&lq=1
+FileInputStream reads single byte at a time. Hence it makes more native call to OS.
+BufferedInputStream reads 8192 bytes at a time and buffers them. Hence it makes less native call to OS.

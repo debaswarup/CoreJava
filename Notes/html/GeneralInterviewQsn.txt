@@ -1,0 +1,7 @@
+Some general interview question:
+
+1. Tell me about the greatest success in your career. Can you give me an example of a setback? What lessons did you learn from it?
+Promotion
+setback -- bug fix in tcs 
+2. Any manager must know how to delegate. Describe to me a situation in which you successfully delegated. One in which the delegation was a failure? 
+How did you manage the situation?

@@ -1,0 +1,95 @@
+////////////////////////////////////////    ............. SERVLET ...............    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+http://java.sun.com/j2ee/tutorial/1_3-fcs/doc/Servlets2.html#75087
+
+--------------------------------------------------------------------------------------
+Servlet <load-on-startup>
+http://stackoverflow.com/questions/809775/what-does-the-servlet-load-on-startup-value-of-0-zero-signify
+
+1. Servlet can be loaded during server startup(i.e. application deployment ) or during its first request.
+2. If no load-on-startup is mentioned, then servlet will be loaded whenever webcontainer decides to load.
+3. If load-on-startup <=0, then servlet is loaded when container feels to load them.
+4. If load-on-startup > 0, then servlet is loaded when server starts with order based on the integer value specified (e.g load-on-startup=1 will be loaded first of all the servlet)
+5. If 2 servlet have same load-on-startup value, then they will be loaded based on the precedence of occurrence in the web.xml
+--------------------------------------------------------------------------------------
+
+Struts tutorial
+
+-------------------------------------------------------------------------------------
+RequestDispatcher-
+It is used to forward request to another servlet/html/jsp from one servlet.
+RequestDispatcher rd = request.getRequestDispatcher("Servlet_Name");
+rd.forward(request,response);
+
+Forward vs Redirect
+Both can be used to send request to another servlet/jsp
+In the case of forward the same request is forwarded to another resource so all the request parameters and request attributes will be available. 
+in second case its a new request so old parameters and attributes will not be available.
+
+Pasted from <http://www.coderanch.com/t/365084/Servlets/java/whats-difference-redirect> 
+----------------------------------------------------------------------------------------
+
+Implicit Objects in jsp
+Request, response, session, application, pagecontext, out
+
+----------------------------------------------------------------------------------------
+
+Difference between include directive and include action
+Include directive - includes another jsp page at compile time i.e. when jsp is compiled into servlet
+Include Action - includes another jsp page at run time
+
+JSP Actions-
+http://www.tutorialspoint.com/jsp/jsp_actions.htm
+
+------------------------------------------------------------------------------------------
+
+SingleThreadModel
+By default all servlets are multi threaded, i.e. with each request a new thread is created.
+Where as if a Servlet implements SingleThreadModel, then a new instance of Servlet is used for every request. A pool of Servlet instances is maintained.
+
+-----------------------------------------------------------------------------------------
+
+How to make JSP ThreadSafe
+This is done by implementing SingleThreadModel.
+<% @page isThreadSafe= "false"  %>
+
+-----------------------------------------------------------------------------------------
+
+Exception Handling in jsp
+1. Using page directive(isErrorPage, ErrorPage)
+2. Using <error-page> in web.xml
+http://www.javatpoint.com/exception-handling-in-jsp
+
+-----------------------------------------------------------------------------------------
+
+http://www.javatpoint.com/jspinterview
+
+http://www.tutorialspoint.com/jsp/jsp_custom_tags.htm
+
+------------------------------------------------------------------------------------------
+
+Exception handling........................
+
+  <error-page>
+	<error-code>404</error-code>
+	<location>/WEB-INF/pages/404.jsp</location>
+  </error-page>
+ 
+  <error-page>
+	<exception-type>java.lang.Exception</exception-type>
+	<location>/WEB-INF/pages/404.jsp</location>
+  </error-page>
+  
+ --------------------------------------------------------------------------------------------
+ 487 + 835 + 65
+ -70-70
+ 1247
+ 
+ 
+ 
+ 750 + 600 
+ 
+ ACC OPENING 0
+ 1ST MAINT 0
+ DELIVERY .25%
+ 

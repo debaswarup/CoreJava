@@ -1,0 +1,30 @@
+> Check python version:
+	open cmd -> type following 
+					pyhton --version
+
+> How to install python:
+	go to https://www.python.org/ -> downloads -> windows -> 2.7
+	
+	
+> After installing, set the Path variable.
+	In cmd, run following command:
+	setx PATH "C:\Python27"
+	Retart cmd and try running "python --version"
+
+> Editors: 
+	Online editor - pythonfiddle
+	Sublime Text
+	Aptana studio
+	
+> 	Python is an interpreted language like javascript.
+	It doesnt need to be compiled before running;
+	To enter to python interpreted mode, open cmd -> run command "python" -> this will open python interpreted mode and we can type any python statement, which should give the desired output.
+	For example: we can type - print "Hello World"
+	To exit interpreted mode run - exit()
+	
+>	To run a python program, first create a file with .py as extension.
+	Then in command prompt, run following command:
+		python TestFile.py
+		
+		
+> Functions are themselves an object. Hence printing a function wil pring some object hexadecimal address.

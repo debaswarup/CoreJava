@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+<to>Rama Sahu</to>
+<from>Sita Gupta</from>
+<heading>Imp Messg</heading>
+<body>Hello ... How r u</body>
+</note>
+
+
+Common stock - A security that represents ownership in a corporation.
+Preferred stock
+> If both types of stock exist, common stock holders cannot be paid dividends until all preferred stock dividends are paid in full.
+> In the event of bankruptcy, common stock investors receive any remaining funds after bondholders, creditors (including employees), 
+  and preferred stock holders are paid. As such, common stock investors often receive nothing after a bankruptcy.
+> On the other hand, common shares on average perform better than preferred shares or bonds over time.
+> Common stock usually carries with it the right to vote on certain matters, such as electing the board of directors. 
+  However, a company can have both a "voting" and "non-voting" class of common stock.  
+> There is no fixed dividend paid out to common stock holders and so their returns are uncertain
+> Similar to bonds, preferred stocks are rated by the major credit-rating companies  
+
+
+www.youtube.com/watch?v=P85sXtTsLQ0
+
+Linq - Language integrated query
+
+Buy Cover: when you short sell that sell shares which you dont own, then you have to buy to cover that short sell.
+ex. if you short sell 1 share @30 and then you buy to cover 1 share @ 25 then you make profit of 5 .
+
+DotNet Urls
+http://www.youtube.com/user/dnfvideo/videos
+http://www.youtube.com/user/kudvenkat?feature=watch
+
+Database Indexing:
+http://www.youtube.com/watch?v=Xk3cgUdoieU
+
+Core Java
+http://docs.oracle.com/javase/tutorial/
+http://www.javatpoint.com/corejava-interview-questions
+http://javarevisited.blogspot.in/2011/04/top-20-core-java-interview-questions.html
+http://www.javacodegeeks.com/2013/09/core-java-interview-questions.html
+http://www.tutorialspoint.com/java/
+http://www.javaworld.com/category/core-java/
+http://javabeginnerstutorial.com/
+http://www.freejavaguide.com/javasource3.htm
+http://web.mit.edu/javadev/doc/tutorial/java/
+http://www.thestudymaterial.com/java/core-java-programs.html
+http://www.caveofprogramming.com/
+
+Design Patterns:
+http://javapapers.com/category/design-patterns/
+http://www.journaldev.com/1827/java-design-patterns-example-tutorial#facade-pattern
+http://www.vogella.com/tutorials/DesignPatterns/article.html
+http://www.allapplabs.com/java_design_patterns/java_design_patterns.htm
+
+Angular JS
+https://github.com/angular/angular.js
+
+Graph Database (OrientDB)
+http://pettergraff.blogspot.in/2014/01/getting-started-with-orientdb.html
+
+Webservice
+http://www.youtube.com/watch?v=ITmcAGvfcJI
+
+9096833023
+
+-----------------------------------------------------------------------------------------------
+Apache Tomcat Facts:
+Tomcat always maintains the context or modules in server project inside the workspace. In fact all the tomcat related configuration files
+can be found in the same server project inside current workspace.
+Also tomcat config files are stored at temp folders inside server plugin of Eclipse (E:\JAVA\testGWT\.metadata\.plugins\org.eclipse.wst.server.core)
+How to add a new Server Project if existing Server project is corrupt:
+Eclipse -> Create New Server Project.
+Example Error: "Two or more Web modules defined in the configuration have the same context root (/TestTomcatWebApp1). To start this server you will need to remove the duplicate(s)."
+Also New servers can be added from Eclipse -> windows -> Preferences -> Server
+-----------------------------------------------------------------------------------------------
+
+Working with CXF:
+1. create a dynamic web project
+2. Add index.html to the Webcontent folder
+3. Add a new tomcat server if not already added to the worspace/project
+4. Test run the web project to see if it is working. That is on the web browser the index.html that is the welcome file should be displayed.
+5. Add a servlet to the project. (Servlet require library servlet-api.jar which can be found inside tomcat lib directory)
+
+-------------------------------------------------------------------------------------------------
+
+Findout which process is running on which port.(On windows machine using DOS command prompt)
+netstat -a -o
+
+-------------------------------------------------------------------------------------------------
+
+satyanarayan patel 9438292680
+
+
+
+select Salesperson.Name from Salesperson 
+where Salesperson.ID NOT IN(
+select Orders.salesperson_id from Orders, Customer 
+where Orders.cust_id = Customer.ID 
+and Customer.Name = 'Samsonic')
+
+
+SELECT *
+FROM Employee Emp1
+WHERE (1) = (
+SELECT COUNT(DISTINCT(Emp2.Salary))
+FROM Employee Emp2
+WHERE Emp2.Salary > Emp1.Salary)
+
+https://answers.avira.com/en/post-question?search=update+failed#/page/3
+https://answers.avira.com/en/question/antivirus-pro-update-fails-in-windows-7-17429
+http://www.avira.com/en/support-for-home-knowledgebase-detail/kbid/982
+nerolac 2542 lift in
+burger green vision 4t0915
+border - bright batik 4b0259
+		light loden 7d1534
+		olive hill
+		line bright
+		
+		docomo cust care 18602665555
+		
+http://www.programmerinterview.com/index.php/database-sql/correlated-vs-uncorrelated-subquery/
+http://www.programmerinterview.com/index.php/database-sql/find-nth-highest-salary-sql/
+http://www.techonthenet.com/oracle/functions/lpad.php
+sql correlated subqueries questions
+
+
+
+
+joint train M
+joint ace DN
+
+calcium biobcplus
+
+pain killer --- lornomicam 8 mg
+lorsaid 8m
+
+
+
+vodafone
+citi credit card
+investment
+
+
+
+
+
+Account No.
+
+IFSC Code
+
+Beneficiary Name
+
+Email ID
+
+Status
+
+ 
+
+  25590100010745  BARB0SAMBAL Padmini Padhee   Enabled   Edit 
+  25590100010065  BARB0SAMBAL Upendra Padhee   Enabled   Edit 
+
+Delete     Add New 
+
+
+
+Thank you, your order has been placed.
+We've sent you an e-mail confirmation. You will receive SMS Alerts on Mobile No.: +91-9619519666. You can change this setting in Your Account..
+Order Number: 171-2148587-0746758
+
+    1 item will be delivered to Debaswarup Padhee  from Amazon . Estimated delivery: 16 Feb 2015
+
+  Review or edit your order
+
+  char kadam
+  tu hai ki nai
+
+http://www.hindustantimes.com/brunch-stories/greatest-indian-novels-ever-part-i/article1-1231662.aspx
+
+
+https://www.goodreads.com/shelf/show/indian-authors
+
+
+
+tapola mahabaleswar
+
+
+#22&23 Maa nakshatra girls PG, Manjunath layout, Munekolla,
+Behind SGR dental college, opp to Aspire heights, marathalli
+Bangalore,
+
+https://archive.org/details/EatPrayLove
+
+
+7718099586
+
+JOLARPETTAI

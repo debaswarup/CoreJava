@@ -1,0 +1,55 @@
+Ps -ef  for process
+Df -k disk space
+Grep command
+Find
+
+----------------------------------
+
+Ø Head and Tail
+Ø Mv
+Ø Cut -f4 -d','
+Ø [rev]
+Ø Wc
+Ø Zip, unzip
+Ø http://www.dwbiconcepts.com/tutorial/24-interview-questions/50-top-25-unix-interview-questions-with-answers-part-i.html
+
+
+------------------------------------------------------
+
+
+xargs
+
+find a file with specific text in jar
+for file in *
+do
+   if [[ "$file" = *.zip* ]] ; then
+     unzip -l "$file" 2> /dev/null | grep "Param.class" && echo $file && exit 0;
+
+   elif [[ "$file" = *.jar* ]] ; then
+     jar tf "$file" 2> /dev/null | grep "Param.class" && echo "$file" && exit 0;
+  
+   fi ;
+done
+
+------------------------------------------------------
+
+find file with a specific text recursively
+
+ find . -type f -exec grep -il "hello" {} \;
+ 
+find file with a specific text non-recursive
+
+ find / -type f -print | xargs grep "hello"
+ 
+http://www.unix.com/showthread.php?s=5599740eea62a3645aa5800b417d8959&t=25774
+
+http://www.cyberciti.biz/faq/howto-search-find-file-for-text-string/
+
+===================================================================
+
+sudo: whenever we want to run a command with elevated privilege then we use sudo.
+Ex. sudo reboot
+when we run reboot directly it doesnt allow. But when we run with sudo it will ask for username n pwd of the user running it and then reboot the system.
+Difference between sudo and su command:
+su command (switch user) allows us to log in as another user and then we can run any command as the other user.
+https://linuxacademy.com/blog/linux/linux-commands-for-beginners-sudo/

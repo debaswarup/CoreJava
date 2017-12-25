@@ -1,0 +1,45 @@
+AutoBoxing
+Why Interface in java
+How TreeMap sorts
+Thread -- Start method
+Unix command for 3rd colmn in data
+marker
+thread safe an object
+difference between rpc and web service
+
+
+-------------------------------------------------------
+
+Layout engine used by browsers
+Gecko used by mozilla firefox
+trident used by ie
+Webkit used by safari,chrome
+
+------------------------------------------------------------
+
+jars for excel export - itext, poi,
+pdf generation - aspose
+
+-----------------------------------------------------------
+
+ways of string reversal
+1.char by char reverse
+2. use recursion
+3. use stack
+
+-------------------------------------------
+
+json vs xml
+http://www.mkyong.com/tutorials/java-json-tutorials/
+
+--------------------------------------------
+
+Weighted average: 
+(element1 * occurance_of_element1 + element2 * occurance_of_element2 + element3 * occurance_of_element3) / (sum of occurances of all elements)
+
+---------------------------------------
+
+
+
+
+

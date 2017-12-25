@@ -1,0 +1,70 @@
+----------------------------------------------------------------------------------------<br>
+ArrayList vs LinkedList...<br>
+ArrayList-<br>
+Maintains Array of element internally.<br>
+Use System class feature ArrayCopy or ArrayShifting for inserting element.<br>
+Search is fastre since index is maintained.<br>
+LinkedList-<br>
+Maintains nodes...with pointer to both prev and next node.<br>
+Insertion at first position or deletion from any position is faster.<br>
+-----------------------------------------------------------------------------------------<br>
+<br>
+Abstract class - <br>
+Ø If at 1 or n number of methods are abstract then class has to be declared as abstract. Class has to be declared as abstract if at least one method is abstract. <br>
+However, if a class is abstract then it is not mandatory that at least one method should be abstract.<br>
+Ø Abstract class is never instantiated. However it can have constructor. Abstract class constructor is called while instatiation of child class through super().<br>
+Ø Instance variable of abstract class can never be abstract. <br>
+  (Abstract modifier is not permitted for instance variable, only public, protected, private, volatile, transient, final are permitted.)<br>
+  <br>
+Interface - <br>
+Ø By default all methods are public, abstract. Only public and abstract modifiers are allowed for methods in interface, no other method is allowed. <br>
+If any other modifier is mentioned, it will give compile error.<br>
+Ø By default all instance variable of Interface are public, static and final. No other modifier is allowed for instance variable in Interface.<br>
+Ø Since every instance variable is final, and there is no constructor, all instance variable has to be initialized during declaration.<br>
+(Otherwise they become blank final variable)<br>
+Ø Interface can not have constructor.<br>
+Ø Can extend 0..* Interfaces.<br>
+Ø Can not extend any class.<br>
+Ø Can not implement Interface.<br>
+  <br>
+NOTE: Interface in java provides Multiple Inheritence feature.  <br>
+-------------------------------------------------------------------------------------------<br>
+<br>
+Set<br>
+ |__HashSet<br>
+ |__LinkedHashSet<br>
+ |__TreeSet<br>
+ <br>
+Set - <br>
+Ø A collection that contains no duplicate elements. <br>
+Ø Sets contain no pair of elements e1 and e2 such that e1.equals(e2), and at most one null element.<br>
+Ref - <http://docs.oracle.com/javase/1.4.2/docs/api/java/util/Set.html> <br>
+HashSet- Hashtable bucket concept….non synchronized……… n time space for basic operation<br>
+LinkedHashSet - HashTable and LinkedList implementation of Set interface…Preserves the natural order in which elements are added.<br>
+TreeSet - Tree structure implementation of Set interface……..  By default ASC sorted order….. Log(n) time cost for basic operations….<br>
+<br>
+HashTable - <br>
+Ø Key- Value<br>
+Ø Non null key<br>
+Ø HashCode and Equals method<br>
+Ø Performance - initial capacity and load factor<br>
+Ø Hash Collision - Single bucket stores multiple keys<br>
+Ø reHash method - when no of elements exceed loadFactor * initialCapacity<br>
+Ø Load factor inversely propertional to space where as directly propertional to time<br>
+Ø Synchronized - throws concurrent modificationException<br>
+<br>
+Map<br>
+ |__HashMap(One Null key many null values.....Not synchronized)<br>
+ |__TreeMap(Sorted order ASC bydefault...Log(n) time...Tree implementation...Not synchronized...)<br>
+ |__HashTable<br>
+ |__LinkedHashMap(natural order preserved...linked list implementation)<br>
+ <br>
+To synchronize HashMap<br>
+Map m = Collections.synchronizedMap(new HashMap(….))<br>
+ <br>
+ <br>
+<br>
+<br>
+ <br>
+ 
+ http://howtodoinjava.com/2013/03/08/difference-between-sleep-and-wait/
