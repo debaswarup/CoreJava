@@ -17,6 +17,8 @@ public class StringIntern {
 		
 		s4 = null;
 		System.out.println(s1.equals(s3));
+		
+		
 	}
 
 }
