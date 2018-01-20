@@ -9,10 +9,11 @@ public class FunctionalInterfaceTest
 	{
 		//doAdd(() -> System.out.println("test222"));
 		List<String> names = Arrays.asList("Ram", "Shyam", "Gopal");
-		/*names.stream().forEach(
-				n -> System.out.println();
-				
-				);*/
+		names.stream().forEach(n -> 
+				{
+				System.out.println();
+				}
+				);
 		
 	}
 	
