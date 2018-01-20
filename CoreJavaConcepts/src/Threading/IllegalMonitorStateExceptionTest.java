@@ -15,6 +15,7 @@ public class IllegalMonitorStateExceptionTest {
 		public void run() {
 			try
 			{
+				//If we dont synchronize on the object we will be waiting on, then it will throw IllegalMonitorStateException
 				synchronized(s)
 				{
 					this.wait(5000);

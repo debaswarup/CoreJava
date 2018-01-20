@@ -64,7 +64,7 @@ TreeSet - Tree structure implementation of Set interface……..  By default ASC sor
 
 HashTable - 
 Ø Key- Value
-Ø Non null key
+Ø Non null key, value
 Ø HashCode and Equals method
 Ø Performance - initial capacity and load factor
 Ø Hash Collision - Single bucket stores multiple keys
@@ -766,8 +766,16 @@ A class is loaded the first time you create an object from the class or the firs
  
 https://docs.oracle.com/javase/tutorial/java/annotations/
 
+========================================================================================
 
+Try with resources: (Added in java7)
+https://docs.oracle.com/javase/tutorial/essential/exceptions/tryResourceClose.html
 http://www.mkyong.com/java/try-with-resources-example-in-jdk-7/
+http://tutorials.jenkov.com/java-exception-handling/try-with-resources.html
+
+> If the methods readLine and close both throw exceptions, then the method readFirstLineFromFileWithFinallyBlock throws the exception thrown from the finally block; the exception thrown from the try block is suppressed. In contrast, if exceptions are thrown from both the try block and the try-with-resources statement, then the method readFirstLineFromFile throws the exception thrown from the try block; the exception thrown from the try-with-resources block is suppressed. 
+
+======================================================================================
 
 Fisheye
 
@@ -810,7 +818,14 @@ Collections.sort() used merge sort before java7 but now it uses Tim sort interna
 
 ======================================================================================
 
+https://www.journaldev.com/2389/java-8-features-with-examples
+
 Java 8 introduced concept of default method where interface can contain method definition through default methods.
+
+Qsn: Why is abstract class required if Interface provides default method now?
+
+https://www.journaldev.com/13521/java-spliterator
+http://www.logicbig.com/tutorials/core-java-tutorial/java-collections/iterator-spliterator/
 
 ===================================================================================
 
@@ -831,3 +846,5 @@ https://stackoverflow.com/questions/21641551/what-is-the-difference-between-file
 https://stackoverflow.com/questions/18600331/why-is-using-bufferedinputstream-to-read-a-file-byte-by-byte-faster-than-using-f?noredirect=1&lq=1
 FileInputStream reads single byte at a time. Hence it makes more native call to OS.
 BufferedInputStream reads 8192 bytes at a time and buffers them. Hence it makes less native call to OS.
+
+====================================================
