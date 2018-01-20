@@ -12,7 +12,7 @@ ideserve
 				which means a connection is established and maintained until the application programs at each end have finished exchanging messages. 
 				It determines how to break application data into packets that networks can deliver, 
 				sends packets to and accepts packets from the network layer, manages flow control, 
-				andâ€”because it is meant to provide error-free data transmissionâ€”handles retransmission of dropped or garbled packets 
+				and—because it is meant to provide error-free data transmission—handles retransmission of dropped or garbled packets 
 				as well as acknowledgement of all packets that arrive.
 				
 				For example, when a Web server sends an HTML file to a client, it uses the HTTP protocol to do so. 
@@ -30,7 +30,7 @@ ideserve
 	Datalink - At this layer, data packets are encoded and decoded into bits
 				The data link layer is divided into two sub layers: The Media Access Control (MAC) layer and the Logical Link Control (LLC) layer. 
 				The MAC sub layer controls how a computer on the network gains access to the data and permission to transmit it.
-	Physical - This layer conveys the bit stream - electrical impulse, light or radio signal â€” 
+	Physical - This layer conveys the bit stream - electrical impulse, light or radio signal — 
 				through the network at the electrical and mechanical level. 
 				It provides the hardware means of sending and receiving data on a carrier, including defining cables, cards and physical aspects.
 	
@@ -234,3 +234,14 @@ socket.io
 ======================================================================================
 
 elasticsearch
+
+============================================================================
+
+Gradle:
+> It is written in groovy.
+> It supports both MAVEN and IVY dependencies.
+> Supports multi project builds.
+> Allow to manage c++ and javascript projects as well.
+> Declarative build language: We tell gradle what need to happen not how it need to happen.
+> Easy to read than Ant and Maven build scripts.
+> Ant is xml based.

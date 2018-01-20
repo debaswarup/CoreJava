@@ -169,3 +169,9 @@ http://www.geeksforgeeks.org/permutations-of-a-given-string-using-stl/
 ===================================================================================
 
 https://www.geeksforgeeks.org/dynamic-programming/
+
+==========================================================
+VOting problem:
+https://github.com/spdeepak/hackerrank/tree/master/src/main/java/com/deepaksp/hackerrank/interview/hacklandelection
+
+====================================================================
