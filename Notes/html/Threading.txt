@@ -17,7 +17,10 @@ http://www.javaworld.com/article/2078440/enterprise-java/java-tip-when-to-use-fo
 
 > When we call synchronize static method, then current thread aquires lock on the class object associated with the class. The class level lock is idependent of lock on any object of the class.
 
-> Synchronize block must provide an object on which thread needs to acquire lock.
+> Synchronize block must provide an object on which thread needs to acquire lock. Synchronized without any parameter is invalid. Also the object should not be null.. otherwise synchronize block on null object will throw NULLPOINTER exception.
+
+> Wait and sleep method throw a compile time exception called InterruptedException.
+
 
 > Reentrant Synchronization: When a thread acquires a lock on an object on which it already holds a lock, then it is called Reentrant lock. This can happen when a synchonize block/method calls another synchronize block/method.
 
@@ -25,15 +28,15 @@ http://www.javaworld.com/article/2078440/enterprise-java/java-tip-when-to-use-fo
 
 > Starvation: Let's say we have one object which has a synchronized method which takes long time to run. If one thread frequently executes this synchronized method, other threads who require synchronized access on the object will often be blocked. 
 
-> When we call wait method on an object, the thread goes into a suspended state and will not wake up untill some other thread notifies for an event. Its a best practice to use wait method inside a while loop, as wait method can wake up by any notification on the object which may not necessarily for the notification current thread is waiting on. Wait also throws InterruptedException similar to Sleep.
-Wait should also be used inside a synchonized block as this requires a lock on the object on which it is being invoked.
+> When we call wait method on an object, the thread goes into a suspended state and will not wake up untill some other thread notifies for an event. Its a best practice to use wait method inside a while loop, as wait method can wake up by any notification on the object which may not necessarily for the notification current thread is waiting on. Wait also throws InterruptedException similar to Sleep.(which is compile time exception)
+Wait should also be used inside a synchonized block as this requires a lock on the object on which it is being invoked. If Wait/Notify not mentioned inside a synchronized block, then it throws IllegalMonitorStateException at runtime.
 When Wait is invoked the thread releases the lock on the object and goes into a suspended state, until another thread acquires the same lock and invokes  notify/notifyall.
 Notify wakes up any one of the thread waiting on the object. This is useful when multiple threads are performing similar operations and it doesnt make any difference which thread wakes up.
 
 > Producer - Consumer https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html
 
 > Strategy to create Immutable object:
-	> Don't provide "setter" methods â€” methods that modify fields or objects referred to by fields.
+	> Don't provide "setter" methods — methods that modify fields or objects referred to by fields.
 	> Make all fields final and private.
 	> Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.
 	> If the instance fields include references to mutable objects, don't allow those objects to be changed:
@@ -112,6 +115,10 @@ Ans. There is a method called holdsLock() on java.lang.Thread, it returns true i
 >> How do you take thread dump in Java?
 Ans. When you take thread dump, JVM dumps state of all threads in log files or standard error console. In windows you can use Ctrl + Break key combination to take thread dump, on Linux you can use kill -3 command for same. You can also use a tool called jstack for taking thread dump, it operate on process id, which can be found using another tool called jps.
 
+>> What is Reentrant lock? 
+https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html
+
+
 >> What is the difference between synchronized and ReentrantLock in Java? Any Disadvantages of ReentrantLock in Java ?
 http://javarevisited.blogspot.in/2013/03/reentrantlock-example-in-java-synchronized-difference-vs-lock.html
 
@@ -133,3 +140,8 @@ http://javarevisited.blogspot.in/2013/03/how-to-create-immutable-class-object-ja
 
 
 ==========================================================================
+
+
+Atomic Integer:
+http://tutorials.jenkov.com/java-util-concurrent/atomicinteger.html
+http://tutorials.jenkov.com/java-concurrency/compare-and-swap.html
