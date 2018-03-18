@@ -162,3 +162,9 @@ http://www.geekinterview.com/question_details/39984
 -------------------------------------------
 
 sybase coalesce
+
+============================================
+
+sybase nth max value:
+http://infocenter.sybase.com/help/index.jsp?topic=/com.sybase.infocenter.dc38151.1520/html/iqrefbb/BCGJFDEA.htm
+RANK() over (order by salary desc)

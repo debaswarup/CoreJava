@@ -79,6 +79,8 @@ Map
  |__LinkedHashMap(natural order preserved...linked list implementation)
  |__WeakHashMap(Same as HashTable, however the unused keys are garbage collected i.e. the entry for the weak keys are removed from Map)
  
+ WeakHashMap Enntry objects are by defaut WeakRefernces.
+ 
 To synchronize HashMap
 Map m = Collections.synchronizedMap(new HashMap(….))
 
@@ -311,7 +313,7 @@ High level concurrency
  ----------------------------------------------
  
  Difference betn HashTable, Map.Synchronized, ConcurrentHashMap
-HashTable - old implentan…non null key value
+HashTable - old implentan…non null key value(both get and put methods are synchronized)
 Map.Synchronize - Synchronize both read & write operation(i.e. blocks the operation)… Problem while iteration
 Concurrent HashMap - Synchronize write but multiple parallel read(Parallel Iteration allowed)….doesnt allow null keys and null values
 http://stackoverflow.com/questions/510632/whats-the-difference-between-concurrenthashmap-and-collections-synchronizedmap
@@ -350,6 +352,7 @@ Object Reachability-
     5. Finally, an object is unreachable, and therefore eligible for reclamation, when it is not reachable in any of the above ways. 
 
 Weak Reference vs soft reference vs phantom reference
+
 -----------------------------------------------------------------------------------------------------
 
 Difference between RPC and RMI
@@ -732,6 +735,7 @@ http://stackoverflow.com/questions/15322093/breaking-of-sinlgleton-by-two-differ
  
  -----------------------------------------------------------------
  DESIGN PATTERNS:
+ https://www.gofpatterns.com/design-patterns/module5/intro-structural-designPatterns.php
  
  When a class has few required properties and many optional properties, following can be used.
  1. Telescoping Constructor Pattern : 
@@ -746,8 +750,30 @@ http://stackoverflow.com/questions/15322093/breaking-of-sinlgleton-by-two-differ
 		which will have the respective optional property set.
 		Inner class will have one build method, which will create a Outer class object from the properties of the inner object and returns the same.
 		Outer outer = new Outer.Builder(required props..).individualOptionalSetterMethods().build();
-		
+https://www.tutorialspoint.com/design_pattern/adapter_pattern.htm
+
+Design Patterns use by Core Java:
+1. StringBuilder, String Buffer use builder pattern.
+2. Calender uses Factory pattern. Calendar.getInstance() is called to create object. Constructor cant be called because Calendar is an abstrct class.
+3. Clone method uses Prototype pattern.
+4. Runtime class uses Singleton. Runtime.getRuntime().
+5. Adapter pattern: Arrays.asList()
+6. Proxy pattern - Reflection		
+7. Strategy Pattern - Comparator.compare method is executed by Collections.sort.
+
+Structural Design Patterns:
+1. Adapter - When 2 system want to interact but they have classes of different types, We need an adapter class in between them to help in interaction.
+2. Facade - Provides a simple interface hiding underlying complex system implemenation.
+3. Proxy - It is used to control the access to the real object. Proxy object on behalf of real object provides the functionalities and it internally calls the real object.
+4. Decorator - Adds responsibility to an object.
+
+Behavioral Pattern:
+1. Strategy Pattern - It allows to change the implemenation at runtime. Strategy class will hold the reference of interface but actual object can be different at run time and based on actual object it calls the implementaion.
 -----------------------------------------------------------------
+
+Difference between xms and xmx
+
+===============================================================
 
 Java Oject life cycle:
 1. Before an object can be created from a class, the class must be loaded. To do that, the Java runtime locates the class on disk (in a .class file) and reads it into memory. Then Java looks for any static initializers that initialize static fields — fields that don't belong to any particular instance of the class, but rather belong to the class itself and are shared by all objects created from the class.
@@ -766,6 +792,9 @@ A class is loaded the first time you create an object from the class or the firs
  
 https://docs.oracle.com/javase/tutorial/java/annotations/
 
+> The class loader of a class doesnt change no matter how many times we run the same java class. But we can explicitly specify a second class loader to load same class.
+> The class loading sequence: when we run java command, jvm loads all core java classes first mainly starting with java.lang package... then loads userclass being run... then runs static block of the class -> then runs static method -> then executes few lines of codes in the static method -> And if reference to any class comes inside the static method then that class is loaded(if not already loaded). One of such class can be BlockingQueue which is not loaded earlier.-> Also it will go in hierarchy -> like BlockingQueue, AbstractQueue etc.. -> Once that class is loaded it will proceed with further statements inside static method.
+> We can see java class loading steps by using -verbose with java command.
 ========================================================================================
 
 Try with resources: (Added in java7)
@@ -848,3 +877,37 @@ FileInputStream reads single byte at a time. Hence it makes more native call to 
 BufferedInputStream reads 8192 bytes at a time and buffers them. Hence it makes less native call to OS.
 
 ====================================================
+
+Spring Beans/IOC:
+https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/beans.html
+https://www.codeproject.com/Articles/592372/Dependency-Injection-DI-vs-Inversion-of-Control-IO
+
+=============================================
+
+https://www.javacodegeeks.com/2013/07/developing-restful-services-using-apache-cxf.html
+http://theopentutorials.com/tutorials/java-ee/jax-rs/apache-cxf-restful-web-service-example/
+
+https://www.javacodegeeks.com/2013/07/developing-restful-services-using-apache-cxf.html
+
+============================================================
+
+Java build tools:
+1. Ant
+https://www.tutorialspoint.com/ant/ant_introduction.htm
+https://ant.apache.org/
+
+2. Gradle:
+> It is written in groovy.
+> It supports both MAVEN and IVY dependencies.
+> Supports multi project builds.
+> Allow to manage c++ and javascript projects as well.
+> Declarative build language: We tell gradle what need to happen not how it need to happen.
+> Easy to read than Ant and Maven build scripts.
+> Ant is xml based.
+
+
+================================================================================
+
+Synchronized:
+A synchronized method acquires a monitor before it executes. For a class (static) method, the monitor associated with the Class object for the method's class is used. For an instance method, the monitor associated with this (the object for which the method was invoked) is used.
+Attempting to synchronize on a null object will throw a NullPointerException.

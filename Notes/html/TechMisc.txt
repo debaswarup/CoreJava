@@ -97,6 +97,7 @@ http://quiz.geeksforgeeks.org/bubble-sort/
 http://quiz.geeksforgeeks.org/merge-sort/
 http://quiz.geeksforgeeks.org/quick-sort/
 http://www.geeksforgeeks.org/timsort/
+https://www.geeksforgeeks.org/heap-sort/
 
 https://stackoverflow.com/questions/1278243/stability-of-quicksort-partitioning-approach
 
@@ -221,6 +222,13 @@ There is no explicit version check.
 ZeroMQ:
 https://www.youtube.com/watch?v=v6AGUeZOVSU
 
+=======================================================================================
+
+ZooKeeper
+kafka
+Queue
+ActiveMQ, RabbitMQ
+
 ============================================================================================
 
 MicroServices:
@@ -237,11 +245,7 @@ elasticsearch
 
 ============================================================================
 
-Gradle:
-> It is written in groovy.
-> It supports both MAVEN and IVY dependencies.
-> Supports multi project builds.
-> Allow to manage c++ and javascript projects as well.
-> Declarative build language: We tell gradle what need to happen not how it need to happen.
-> Easy to read than Ant and Maven build scripts.
-> Ant is xml based.
+Apache hadoop f/w, HDFS, Map Reduce, Hive, Flume, Sqoop, Oozie, Spark, Spark Streaming, Scala
+BigData and batch/real-time ingestion
+Java, Spring, Elastic Search, Cassandra
+Cloudera Manager, Cloudera Navigator, Hue, Apache Pig, Python

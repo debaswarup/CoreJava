@@ -26,6 +26,8 @@ http://www.javaworld.com/article/2078440/enterprise-java/java-tip-when-to-use-fo
 
 > Volatile variable always makes sure that every read that happens must be done after write is completed, so that read operation sees latest value.
 
+> Disadvantages Synchronization are deadlock and starvation.
+
 > Starvation: Let's say we have one object which has a synchronized method which takes long time to run. If one thread frequently executes this synchronized method, other threads who require synchronized access on the object will often be blocked. 
 
 > When we call wait method on an object, the thread goes into a suspended state and will not wake up untill some other thread notifies for an event. Its a best practice to use wait method inside a while loop, as wait method can wake up by any notification on the object which may not necessarily for the notification current thread is waiting on. Wait also throws InterruptedException similar to Sleep.(which is compile time exception)
